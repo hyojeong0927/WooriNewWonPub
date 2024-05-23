@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>우리금융저축은행</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0, width=device-width, viewport-fit=cover" />
+  <meta name="format-detection" content="telephone=no" />
+
+  <script type="text/javascript" src="../js/jquery-3.3.1.js"></script>
+  <script type="text/javascript" src="../js/jquery-ui.js"></script>
+  <script type="text/javascript" src="../js/swiper.min.js"></script>     
+  <script type="text/javascript" src="../js/common.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="../css/common.css">
+</head>
+<body>
+  <div id="wrap">
+    <!-- header -->
+    <header>
+      <button type="button" class="btn-back" onclick="history.back(-1);">뒤로가기</button>
+      <strong>우리WON저축은행 가입</strong>
+      <button type="button" class="btn-close" onclick="history.back(-1);">취소</button>
+    </header>
+    <!-- //header -->
+
+    <!-- content --> 
+    <div class="content">
+      <div class="cont-box">
+        <div class="tit-box">
+          <h3>비대면 금융거래를 위해<br>고객님의 정보 입력이 필요해요</h3>
+        </div>
+        <div class="agree-box">
+          <form action="#none" class="form-input">
+            <fieldset>
+              <legend>개인정보 입력 폼그룹</legend>
+              <div class="inp-box">
+                <div class="form-tit b2_dense">성명</div>
+                <div class="form-cont">
+                  <input type="text" class="h5_dense" name="" id="inpName" placeholder="성명을 입력하세요">
+                </div>
+              </div>
+              <div class="inp-box">
+                <div class="form-tit b2_dense">주민등록번호</div>
+                <div class="form-cont form-regiNum">
+                  <input type="password" class="inp_half h5_dense residentNumber" name="" id="resiNum01" placeholder="앞 6자리"><span class="bar">-</span>
+                  <input type="text" class="inp_half h5_dense" name="" id="resiNum02" placeholder="0">
+                  <div class="dot-box">
+                  
+                  </div>
+                </div>
+              </div>
+              <div class="inp-box">
+                <div class="form-tit b2_dense">이메일</div>
+                <div class="form-cont">
+                  <input type="text" class="h5_dense" name="" id="inpEmail" placeholder="이메일 주소를 입력하세요">
+                </div>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+        <div class="btn-box-fixed">
+          <div class="btn-box">
+            <button type="button" class="btn-lg btn-p h5">모두 입력했어요</button>
+            <!-- 기본 -->
+            <button type="button" class="btn-lg btn-p h5 on" style="display: none;">모두 입력했어요</button>
+            <!-- 선택 -->
+            <button type="button" class="btn-lg btn-p h5 disable" style="display: none;">모두 입력했어요</button>
+            <!-- 비활성화 -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- //content -->
+  </div>
+</body>
+</html>
+

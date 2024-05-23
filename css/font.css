@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap');
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+/*
+@font-face{font-family:'Noto Sans KR';font-style:normal;font-weight:300;src:url("../fonts/NotoSansKR/NotoSansKR-Light.woff2") format("woff2"),url("../fonts/NotoSansKR/NotoSansKR-Light.woff") format("woff"),url("../fonts/NotoSansKR/NotoSansKR-Light.otf") format("opentype");unicode-range:U+AC00-D7A3;}
+@font-face{font-family:'Noto Sans KR';font-style:normal;font-weight:400;src:url("../fonts/NotoSansKR/NotoSansKR-Regular.woff2") format("woff2"),url("../fonts/NotoSansKR/NotoSansKR-Regular.woff") format("woff"),url("../fonts/NotoSansKR/NotoSansKR-Regular.otf") format("opentype");unicode-range:U+AC00-D7A3;}
+@font-face{font-family:'Noto Sans KR';font-style:normal;font-weight:500;src:url("../fonts/NotoSansKR/NotoSansKR-Medium.woff2") format("woff2"),url("../fonts/NotoSansKR/NotoSansKR-Medium.woff") format("woff"),url("../fonts/NotoSansKR/NotoSansKR-Medium.otf") format("opentype");unicode-range:U+AC00-D7A3;}
+@font-face{font-family:'Noto Sans KR';font-style:normal;font-weight:700;src:url("../fonts/NotoSansKR/NotoSansKR-Bold.woff2") format("woff2"),url("../fonts/NotoSansKR/NotoSansKR-Bold.woff") format("woff"),url("../fonts/NotoSansKR/NotoSansKR-Bold.otf") format("opentype");unicode-range:U+AC00-D7A3;}
+@font-face{font-family:'Noto Sans KR';font-style:normal;font-weight:900;src:url("../fonts/NotoSansKR/NotoSansKR-Black.woff2") format("woff2"),url("../fonts/NotoSansKR/NotoSansKR-Black.woff") format("woff"),url("../fonts/NotoSansKR/NotoSansKR-Black.otf") format("opentype");unicode-range:U+AC00-D7A3;}
+
+@font-face{font-family:'Roboto';font-style:normal;font-weight:100;src:url("../fonts/Roboto/Roboto-Thin.woff2") format("woff2"),url("../fonts/Roboto/Roboto-Thin.woff") format("woff"),url("../fonts/Roboto/Roboto-Thin.otf") format("opentype");unicode-range:U+0041-005A, U+0061-007A, U+0030-0039;}
+@font-face{font-family:'Roboto';font-style:normal;font-weight:300;src:url("../fonts/Roboto/Roboto-Light.woff2") format("woff2"),url("../fonts/Roboto/Roboto-Light.woff") format("woff"),url("../fonts/Roboto/Roboto-Light.otf") format("opentype");unicode-range:U+0041-005A, U+0061-007A, U+0030-0039;}
+@font-face{font-family:'Roboto';font-style:normal;font-weight:400;src:url("../fonts/Roboto/Roboto-Regular.woff2") format("woff2"),url("../fonts/Roboto/Roboto-Regular.woff") format("woff"),url("../fonts/Roboto/Roboto-Regular.otf") format("opentype");unicode-range:U+0041-005A, U+0061-007A, U+0030-0039;}
+@font-face{font-family:'Roboto';font-style:normal;font-weight:500;src:url("../fonts/Roboto/Roboto-Medium.woff2") format("woff2"),url("../fonts/Roboto/Roboto-Medium.woff") format("woff"),url("../fonts/Roboto/Roboto-Medium.otf") format("opentype");unicode-range:U+0041-005A, U+0061-007A, U+0030-0039;}
+@font-face{font-family:'Roboto';font-style:normal;font-weight:700;src:url("../fonts/Roboto/Roboto-Bold.woff2") format("woff2"),url("../fonts/Roboto/Roboto-Bold.woff") format("woff"),url("../fonts/Roboto/Roboto-Bold.otf") format("opentype");unicode-range:U+0041-005A, U+0061-007A, U+0030-0039;}
+*/
+
+/* ============================== font ============================== */
+a, a:active, a:hover, a:link, a:visited, abbr, acronym, address, applet, article, aside, audio, 
+b, big, blockquote, body, button, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, 
+fieldset, figure, figcaption, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, 
+i, iframe, img, ins, input, kbd, label, legend, li, object, mark, menu, nav, ol, output, p, pre, q, ruby, 
+s, samp, section, select, span, small, strike, strong, sub, summary, sup, table, tbody, td, textarea, tfoot, th, thead, time, tr, tt, u, ul, 
+var, video{
+	font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; letter-spacing:-0.025em; font-weight:400;font-size:15px;line-height:1.25em;word-wrap:break-word;word-break:keep-all;color: rgba(7, 15, 22, 0.82);-webkit-text-size-adjust:none;
+}
+b, h1, h2, h3, h4, h5, h6, strong, th{font-weight:700;}
