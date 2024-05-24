@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>우리금융저축은행</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0, width=device-width, viewport-fit=cover" />
+  <meta name="format-detection" content="telephone=no" />
+
+  <script type="text/javascript" src="../js/jquery-3.3.1.js"></script>
+  <script type="text/javascript" src="../js/jquery-ui.js"></script>
+  <script type="text/javascript" src="../js/swiper.min.js"></script>     
+  <script type="text/javascript" src="../js/common.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="../css/common.css">
+</head>
+<body>
+  <div id="wrap">
+    <!-- header -->
+    <header>
+      <button type="button" class="btn-back" onclick="history.back(-1);">뒤로가기</button>
+      <strong>우리WON저축은행 가입</strong>
+      <button type="button" class="btn-close" onclick="history.back(-1);">취소</button>
+    </header>
+    <!-- //header -->
+
+    <!-- content --> 
+    <div class="content">
+      <div class="cont-box">
+        <div class="tit-box">
+          <h3>본인확인을 위해<br>휴대폰 인증을 해주세요</h3>
+        </div>
+        <div class="agree-box">
+          <form action="#none" class="form-input">
+            <fieldset>
+              <legend>휴대폰 정보 입력 폼그룹</legend>
+              <div class="inp-box">
+                <div class="form-tit b2_dense">휴대폰 번호</div>
+                <div class="form-cont">
+                  <button type="button" class="btn-sel h5_dense" data-view="call-box">통신사 선택</button>
+                  <input type="text" class="inp_phone h5_dense" name="" id="phoneNum" placeholder="(-) 제외하고 입력">
+                  <!-- 통신사 선택창 -->
+                  <div class="call-box toggle-box" style="display: block;">
+                    <div class="toggle">
+                        <div class="tit-box">
+                            <strong class="h4">통신사 선택</strong>
+                            <button type="button" class="btn-close">닫기</button>
+                        </div>
+                        <div class="list-box">
+                          <ul>
+                              <li><button type="button" class="h6 select">SKT</button></li>
+                              <li><button type="button" class="h6">KT</button></li>
+                              <li><button type="button" class="h6">LGU+</button></li>
+                              <li><button type="button" class="h6">SK 알뜰폰</button></li>
+                              <li><button type="button" class="h6">KT 알뜰폰</button></li>
+                              <li><button type="button" class="h6">LGU+ 알뜰폰</button></li>
+                          </ul>
+                        </div>
+                    </div>
+                  </div>
+                  <!-- //통신사 선택창-->
+                </div>
+              </div>
+            </fieldset>
+          </form>
+          <div class="term-box">
+            <div class="chk-all-box">
+              <input type="checkbox" id="chkAll01"><label for="chkAll01"><span class="h6">필수 약관 모두 체크하기</span></label><button type="button" class="agree-open on">약관목록보기</button>
+            </div>
+            <div class="chk-list-box" style="display: block;">
+              <ul>
+                <li>
+                  <div class="inp-chk"><input type="checkbox" name="" id="chk01_1" checked><label for="chk01_1"><span class="b1">[필수] 개인정보 수집·이용 동의</span></label></div><button type="button" class="agree-view">약관보기</button>
+                </li>
+                <li>
+                  <div class="inp-chk"><input type="checkbox" name="" id="chk01_2"><label for="chk01_2"><span class="b1">[필수] 고유식별정보 처리 동의</span></label></div><button type="button" class="agree-view">약관보기</button>
+                </li>
+                <li>
+                  <div class="inp-chk"><input type="checkbox" name="" id="chk01_3"><label for="chk01_3"><span class="b1">[필수] 통신사 이용약관 동의</span></label></div><button type="button" class="agree-view">약관보기</button>
+                </li>
+                <li>
+                  <div class="inp-chk"><input type="checkbox" name="" id="chk01_4"><label for="chk01_4"><span class="b1">[필수] 서비스 이용약관 동의</span></label></div><button type="button" class="agree-view">약관보기</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="btn-box-fixed">
+          <div class="btn-box">
+            <button type="button" class="btn-lg btn-p h5">네, 동의하고 진행할게요</button>
+            <!-- 기본 -->
+            <button type="button" class="btn-lg btn-p h5 on" style="display: none;">네, 동의하고 진행할게요</button>
+            <!-- 선택 -->
+            <button type="button" class="btn-lg btn-p h5 disable" style="display: none;">네, 동의하고 진행할게요</button>
+            <!-- 비활성화 -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- //content -->
+  </div>
+</body>
+</html>
+

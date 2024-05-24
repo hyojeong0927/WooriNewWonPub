@@ -1,0 +1,57 @@
+ <!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>우리금융저축은행</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0, width=device-width, viewport-fit=cover" />
+  <meta name="format-detection" content="telephone=no" />
+
+  <script type="text/javascript" src="../js/jquery-3.3.1.js"></script>
+  <script type="text/javascript" src="../js/jquery-ui.js"></script>
+  <script type="text/javascript" src="../js/swiper.min.js"></script>     
+  <script type="text/javascript" src="../js/common.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="../css/common.css">   
+</head>
+<body>
+  <div id="wrap">
+    <!-- header -->
+    <header>
+      <button type="button" class="btn-back" onclick="history.back(-1);">뒤로가기</button>
+      <strong>첫번째 저축예금 계좌 개설</strong>
+      <button type="button" class="btn-close_txt" onclick="history.back(-1);">취소</button>
+    </header>
+    <!-- //header -->
+
+    <!-- content --> 
+    <div class="content">
+      <!-- 타이틀 -->
+      <div class="tit-box02">
+          <h6>추가이체를 눌렀을 때<br>보여지는 확인 창(예/아니오 버튼 2개)</h6>
+      </div>
+      <!-- //타이틀 -->
+      
+      <!-- 팝업 보기 버튼 -->
+      <div class="btn-box">
+        <button type="button" class="btn btn-lg btn-p" onclick="LayerPopup.open('popup-info'); return false;">버튼 2개 팝업 보기</button>
+      </div>
+      <!-- 팝업 보기 버튼 -->                
+      
+      <!-- popup : 신청 진행 확인 -->
+      <div class="layer-popup popup-alert popup-info">
+        <div class="popup"> 
+          <div class="popup-txt">
+            <h5>추가이체를 위해 다건이체 화면으로<br>이동 하시겠어요?</h5>
+          </div>
+          <div class="btn-box type02 asym">
+              <button type="button" class="btn-md btn-t btn-w100 h5"  onclick="LayerPopup.close();">닫기</button>
+              <button type="button" class="btn-md btn-p btn-w220 h5" onclick="LayerPopup.close();">확인</button>
+          </div>  
+        </div><!-- //popup -->
+      </div><!-- //popup : 신청 진행 확인 -->                 
+    </div>
+    <!-- //content -->
+  </div>
+</body>
+</html>

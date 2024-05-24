@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>우리금융저축은행</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0, width=device-width, viewport-fit=cover" />
+  <meta name="format-detection" content="telephone=no" />
+
+  <script type="text/javascript" src="../js/jquery-3.3.1.js"></script>
+  <script type="text/javascript" src="../js/jquery-ui.js"></script>
+  <script type="text/javascript" src="../js/swiper.min.js"></script>     
+  <script type="text/javascript" src="../js/common.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="../css/common.css">   
+</head>
+<body>
+  <div id="wrap">
+    <!-- header -->
+    <header>
+      <button type="button" class="btn-back" onclick="history.back(-1);">뒤로가기</button>
+      <strong>이체한도관리</strong>
+    </header>
+    <!-- //header -->
+
+    <!-- content --> 
+    <div class="content">
+      <div class="cont-box">
+        <div class="tit-box">
+          <h3>변경하실<br>이체한도를 입력해 주세요</h3>
+        </div>
+        <div class="data-box" style="margin-top: 24px;">
+          <div class="list-box bg">
+            <table>
+              <colgroup>
+                <col style="width: 45%;">
+                <col style="width: 55%;">
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th class="th-row03 btm-line ta-l b1">
+                    등록된 보안매체<button type="button" class="btn-help btn-sel" data-view="limitInfo-box">도움말</button>
+                  </th>
+                  <td class="td-row03 btm-line ta-r b1">OTP</td>
+                </tr>
+                <tr>
+                  <th class="th-row03 btm-line ta-l b1">현재 1일 이체한도</th>
+                  <td class="td-row03 btm-line ta-r b1">500,000,000원</td>
+                </tr>
+                <tr>
+                  <th class="th-row03 ta-l b1">현재 1회 이체한도</th>
+                  <td class="td-row03 ta-r b1">5,000,000원</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="agree-box">
+          <form action="#none" class="form-input">
+            <fieldset>
+              <legend>이체한도 폼그룹</legend>
+              <h5 class="txt-default01">변경할 이체한도</h5>
+              <div class="inp-box type02">
+                <div class="form-tit b2_dense">1일 이체한도</div>
+                <div class="form-cont">
+                  <input type="number" class="inp-limit h5_dense ta-r" name="" id="inpLimit01" placeholder="000" value=""><span class="h5_dense txt-default" style="margin-left: 2px;">원</span>
+                </div>
+              </div>
+              <div class="txt-caption info_caption txt-default04 ta-c b2_dense mb-24"><span><img src="../images/ico_info_xsm.png" alt=""></span>최대 5억원 내에서 변경할 수 있어요.</div>
+              <div class="inp-box type02">
+                <div class="form-tit b2_dense">1회 이체한도</div>
+                <div class="form-cont">
+                  <input type="number" class="inp-limit h5_dense ta-r" name="" id="inpLimit02" placeholder="000" value=""><span class="h5_dense txt-default" style="margin-left: 2px;">원</span>
+                </div>
+              </div>
+              <div class="txt-caption info_caption txt-default04 ta-c b2_dense"><span><img src="../images/ico_info_xsm.png" alt=""></span>최대 1억원 내에서 변경할 수 있어요.</div>
+            </fieldset>
+          </form>
+        </div>
+        <div class="wran-box" style="padding-top: 32px;">
+          <div class="wran-tit-info b1">유의사항</div>
+          <div class="wran-txt-box">
+            <ul class="list-type01">
+              <li class="b2 txt-default03">이체한도 증액은 비대면 실명확인 절차를 완료 후 변경 가능합니다.</li>
+              <li class="b2 txt-default03">2022.07.01부터 '전자금융 보안등급별 이체한도 변경'에 따라 변경가능한 이체한도 내에서 등록하실 수 있습니다.</li>
+              <li class="b2 txt-critical">인터넷뱅킹도 함께 적용됩니다.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="btn-box-fixed">
+        <div class="btn-box">
+          <button type="button" class="btn-lg btn-p h5">네, 확인했어요</button>
+          <!-- 기본 -->
+          <button type="button" class="btn-lg btn-p h5 on" style="display: none;">네, 확인했어요</button>
+          <!-- 선택 -->
+          <button type="button" class="btn-lg btn-p h5 disable" style="display: none;">네, 확인했어요</button>
+          <!-- 비활성화 -->
+        </div>
+      </div>
+      <!-- 이체한도 안내창 -->
+      <div class="limitInfo-box toggle-box" style="display: block;">
+        <div class="toggle">
+            <div class="tit-box">
+                <strong class="h4">보안매체별 최대 이체한도</strong>
+                <button type="button" class="btn-close">닫기</button>
+            </div>
+            <div class="list-box">
+              <table>
+                <colgroup>
+                  <col style="width: 33%;">
+                  <col style="width: 33%;">
+                  <col style="width: 33%;">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th class="th-row03 bg top-line right-line ta-c">보안매체</th>
+                    <th class="th-row03 bg top-line right-line ta-c">1회</th>
+                    <th class="th-row03 bg top-line ta-c">1일</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="td-row03 btm-line02 right-line ta-c">OTP</td>
+                    <td class="td-row03 btm-line02 right-line ta-c">1억원</td>
+                    <td class="td-row03 btm-line02 ta-c">5억원</td>
+                  </tr>
+                  <tr>
+                    <td class="td-row03 btm-line02 right-line ta-c">mOTP</td>
+                    <td class="td-row03 btm-line02 right-line ta-c">1천만원</td>
+                    <td class="td-row03 btm-line02 ta-c">5천만원</td>
+                  </tr>
+                  <tr>
+                    <td class="td-row03 right-line ta-c">간편인증</td>
+                    <td class="td-row03 right-line ta-c">3백만원</td>
+                    <td class="td-row03 ta-c">3백만원</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+        </div>
+      </div>
+      <!-- //출금계좌 선택창-->
+    </div>
+    <!-- //content -->
+  </div>
+</body>
+</html>

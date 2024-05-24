@@ -1,0 +1,1722 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head> 
+		<meta charset="UTF-8">
+		<title>우리금융저축은행-뉴WON</title>
+		
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/font.css" />
+		<style>
+			body{padding:10px;}
+			h3,h4,th,td,a,li,strong,p,span{font-size:12px;font-weight:400;letter-spacing:-0.5px;}
+			h3,h4,th{font-weight:500;}
+
+			.fc_com{color:#1490ef;}
+			.fc_blue{color:blue;}
+			.fc_green{color:green;}
+			.fc_red{color:red;}
+			.fc_gray{color:silver;}
+			.fc_orange{color:orange;}
+
+			.bg_gray{background:#f8f8f8;font-size:13px;}
+
+			div.i-box{min-height:100vh;}
+			.i-box ~ .i-box{min-height:calc(100vh - 10px);margin-top:80vh;padding-top:10px;}
+
+			.index-link{font-size:0;}
+			.index-link a{width:auto;min-width:115px;margin-right:5px;padding:0 35px;border:1px solid #1490ef;border-bottom:none;text-align:center;font-size:14px;line-height:35px;color:#333;border-top-right-radius:5px;border-top-left-radius:5px;}
+			.index-link a.on{background:#1490ef;font-weight:500;color:#fff;}
+
+			h3{margin:0;padding:20px;background:#1490ef;font-size:20px;text-align:left;color:#fff;}
+			h3 strong{display:block;font-weight:normal;}
+
+			.info{margin:20px 0 0;color:#000;}
+
+			table{width:100%;table-layout:fixed;margin:10px 0;border:1px solid #ccc;border-collapse:collapse;border-spacing:0;}
+			table thead{background:#efefef;}
+			table thead th{padding:10px;border-bottom:1px solid #ccc;border-left:1px solid #ddd;}
+			/* table thead th:nth-child(2){border-left:1px solid #ddd;} */
+			table tbody tr:hover{background:rgba(202,202,202,0.2);}
+			table tbody th,
+			table tbody td{padding:7px 10px;border-bottom:1px solid #ddd;border-left:1px solid #ddd;text-align:center;}
+			table thead th:first-child,
+			table tbody th:first-child,
+			table tbody td:first-child{border-left:none;}
+			table tbody td:last-child{text-align:left;}
+			table tbody th:not(:first-child){font-weight:400;}
+			table tbody th p{margin-top:3px;font-size:11px;}
+			table tbody tr:last-child td{border-bottom:none;}
+			table tbody td a{display:inline !important;font-size:12px !important;color:#222;}
+			table tbody td.tCenter{text-align:center;}
+			table tbody td.same:before{display:block;width:8px;height:8px;margin:0 auto;background:#1490ef;border-radius:50%;content:"";opacity:0.55;}
+			table tbody td.end:before{display:block;width:8px;height:8px;margin:0 auto;background:green;border-radius:50%;content:"";}
+			table tbody td.ing:before{display:block;width:8px;height:8px;margin:0 auto;background:red;border-radius:50%;content:"";}
+			table tbody td.defer:before{display:block;width:8px;height:8px;margin:0 auto;background:orange;border-radius:50%;content:"";}
+			table tbody td.cancel:before{display:block;width:8px;height:8px;margin:0 auto;background:silver;border-radius:50%;content:"";}
+			table tbody td.ing2:before{display:block;text-align:center;color:#999;content:"작업 전";}
+			/* table tbody td.cancel:before{content:"사용 안함";display:block;text-align:center;color:#999;} */
+			table tbody ul{margin:0;padding-left:20px;}			
+			table tbody li~li{margin-top:3px;}
+			table tbody li:first-child{margin-top:0;}
+			table tbody li:last-child{margin-bottom:0;}
+			table tbody .notice,
+			table tbody .bar,
+			table tbody .dot{position:relative;padding-left:9px;}
+			table tbody .notice~.notice,
+			table tbody .bar~.bar,
+			table tbody .notice+.bar,
+			table tbody .bar+.notice{margin-top:3px;}
+			table tbody .notice:before{position:absolute;top:2px;left:0;color:red;content:"*";}
+			table tbody .notice.gray:before{color:#999;}
+			table tbody .bar:before{position:absolute;top:-1px;left:0;color:#000;content:"-";}
+			table tbody .dot:before{position:absolute;top:-1px;left:0;color:#000;content:"·";}
+			table tbody .notice + ul,
+			table tbody .bar + ul{margin-top:3px;padding-left:8px;}
+
+			div.h-box{min-height:calc(100vh - 10px);margin-top:80vh;}
+			div.h-box h3{text-transform:uppercase;}
+			div.history{margin-top:20px;padding-left:20px;} 
+			div.history:last-child{margin-bottom:100px;} 
+			div.history h4{margin:0;} 
+			div.history ul{margin:8px 0 0 20px;} 
+			div.history li{margin-bottom:30px;list-style-type:disc;} 
+			div.history li,
+			div.history p{font-size:13px;}
+			div.history strong{font-size:16px;}
+			div.history p{margin:5px 0;} 
+			div.history p:before{display:inline-block;margin-right:3px;content:"-";}
+			div.history ul ul li{margin-bottom:10px;list-style-type:decimal;} 	
+			div.history ul ul ul{margin:8px 0 0 15px;} 	
+			div.history ul ul ul li{margin-bottom:8px;list-style-type:decimal;} 				 	
+			div.history ul.list-d{margin-left:0;} 	
+			div.history ul.list-d li{list-style-type:none;} 
+			div.history ul.list-d p{margin-left:15px;}	
+			div.history .new{color:red;}
+			div.history .new:before{display:inline-block;margin-right:5px;padding:0 5px;border:1px solid;font-weight:500;font-size:11px;line-height:17px;color:red;content:"신규 페이지";}
+			div.history .all{color:green;}	
+			div.history .all:before{display:inline-block;margin-right:5px;padding:0 5px;border:1px solid;font-weight:500;font-size:11px;line-height:17px;color:green;content:"공통 사항";}	 
+				 
+			div.common{margin-bottom:0;}
+			
+			div.fix-btn{position:fixed;right:0;bottom:0;background:#1490ef;font-size:0;border-top-right-radius:10px;border-top-left-radius:10px;}
+			div.fix-btn a{width:auto;height:35px;padding:0 20px;font-size:12px;line-height:36px;color:#fff;}
+			div.fix-btn a ~ a{border-left:1px solid #fff;}
+		</style>
+	</head>
+	<body>
+		<div class="wrap" id="top">
+			<div class="i-box" style="padding-bottom:10px;">
+				<div class="index-link">
+					<a href="index.html" class="on">mobile</a>
+					<!-- <a href="#history">history</a> -->
+				</div>
+				<h3>우리금융저축은행 뉴WON 작업 파일 리스트 (app)</h3>		
+				
+				<p class="info">상태: <span class="fc_green">완료</span> / <span class="fc_red">진행중</span> / <span class="fc_orange">보류</span> / <span class="fc_gray">사용안함</span></p>
+					
+				<table>
+					<colgroup>
+						<col width="11%;">
+						<col width="11%;">
+						<col width="11%;">
+						<col width="11%;">
+						<col width="11%;">
+						<col width="5%;">
+						<col width="18%;">
+						<col width="22%;">
+					</colgroup>
+					<thead>					
+						<tr>
+							<th colspan="5">메뉴명 (화면명)</th>
+							<th>상태</th>
+							<th>화면ID (파일명)</th>
+							<th>메모</th>
+						</tr>
+					</thead>
+					<tbody>						
+						<tr>
+							<th>공통</th>
+							<th>로딩</th>
+							<th>로딩 화면</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/loading.html" target="_blank">loading</a></td>
+							<td>임시 gif 적용 2024.05.20</td>
+						</tr>
+						<tr>
+							<th></th>
+							<th>신규계좌 비밀번호</th>
+							<th>신규계좌 비밀번호 입력</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/PU_COM_01.html" target="_blank">PU_COM_01</a></td>
+							<td>※ 키패드 디자인 확인을 위한 임의 적용(모바일 사이즈(width: 360px) 기준으로 적용)</td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th>신규계좌 비밀번호 재입력</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/PU_COM_01_02.html" target="_blank">PU_COM_01_02</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th>신분증확인</th>
+							<th>신분증 촬영 안내</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/PU_COM_02_신분증확인.html" target="_blank">PU_COM_02_신분증확인</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th>신분증 정보 수정</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/PU_COM_02_틀린정보수정.html" target="_blank">PU_COM_02_틀린정보수정</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th>신분증 진위 확인</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/PU_COM_02_진위확인.html" target="_blank">PU_COM_02_진위확인</a></td>
+							<td>더미 png 시퀀스 애니메이션 이미지 사용</td>
+						</tr>
+						<tr>
+							<th></th>
+							<th>타행 본인 계좌 인증</th>
+							<th></th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/PU_COM_03.html" target="_blank">PU_COM_03</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th>통장개설 완료</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/PU_COM_50.html" target="_blank">PU_COM_50</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th>회원가입</th>
+							<th>[Step1] 약관동의</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/UBWS-01-01_01.html" target="_blank">UBWS-01-01_01</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th>[Step2] 개인정보 입력</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/UBWS-01-01_02.html" target="_blank">UBWS-01-01_02</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th>[Step3] 휴대폰 인증</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/PU_COM_14.html" target="_blank">PU_COM_14</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th>[바텀시트] 통신사 선택</th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/BS_COM_16.html" target="_blank">BS_COM_16</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th>[팝업] 인증번호 입력</th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/PU_COM_27.html" target="_blank">PU_COM_27</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th>간편 비밀번호 입력</th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/PU_COM_28.html" target="_blank">PU_COM_28</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th>간편비밀번호 오류 안내</th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/PU_COM_28_01.html" target="_blank">PU_COM_28_01</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th>패턴 등록</th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/PU_COM_29.html" target="_blank">PU_COM_29</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th>[Step4] 회원가입 완료</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/PU_COM_53.html" target="_blank">PU_COM_53</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th>약관</th>
+							<th>[필수] 전자금융거래기본약관</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/ME_AG_P_02.html" target="_blank">ME_AG_P_02</a></td>
+							<td>※ 약관은 기존 퍼블리싱 파일 그대로 갖고 옴<br>- 별도의 css(common_terms.css) 적용</td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th>[필수] 우리금융저축은행 모바일 서비스 이용약관</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/ME_AG_P_03.html" target="_blank">ME_AG_P_03</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th>[선택] 마케팅 정보 수신 동의</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/ME_AG_P_04.html" target="_blank">ME_AG_P_04</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th>[필수] 우리금융저축은행 회원약관</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/ME_AG_P_05.html" target="_blank">ME_AG_P_05</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th>[필수] 우리금융저축은행 멤버스 가입 동의서(신규)</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/ME_AG_P_07.html" target="_blank">ME_AG_P_07</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th>[필수] 개인(신용)정보 수집·이용·제공 동의서(여신금융거래)</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/COM_AG_P_02.html" target="_blank">COM_AG_P_02</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th>[필수] 개인(신용)정보 수집·이용·제공·조회 동의서</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/COM_AG_P_03.html" target="_blank">COM_AG_P_03</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th>[필수] 대출 거절사유 고지</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/COM_AG_P_04.html" target="_blank">COM_AG_P_04</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th>[필수] (서울보증보험)계약 체결·이행 등을 위한 상세 동의서(개인금융성 신용보험용)</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/COM_AG_P_05.html" target="_blank">COM_AG_P_05</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th>[선택] 개인정보 수집·이용 동의서(상품 서비스 안내 등)</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/COM_AG_P_06.html" target="_blank">COM_AG_P_06</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th>[필수] 추가약정서 (개인금융신용보험)</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/COM_AG_P_07.html" target="_blank">COM_AG_P_07</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th>[햇살론 필수] 개인(신용)정보 수집·이용·제공 동의서</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/COM_AG_P_08.html" target="_blank">COM_AG_P_08</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th>[햇살론 필수] 개인(신용)정보 조회 동의서(신용보증 신청용)</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/COM_AG_P_09.html" target="_blank">COM_AG_P_09</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th>[필수] 여신거래기본약관</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/COM_AG_P_10.html" target="_blank">COM_AG_P_10</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th>[필수] 여신거래약정서</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/COM_AG_P_11.html" target="_blank">COM_AG_P_11</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th>[필수] CMS이용약관</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/COM_AG_P_12.html" target="_blank">COM_AG_P_12</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th>[필수] 금리인하요구권</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/COM_AG_P_13.html" target="_blank">COM_AG_P_13</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th>[필수] 대출약정사항</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/COM_AG_P_14.html" target="_blank">COM_AG_P_14</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th>[필수A] 대출상품설명서</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/COM_AG_P_15.html" target="_blank">COM_AG_P_15</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th>대출모집인 설명확인서</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/COM_AG_P_16.html" target="_blank">COM_AG_P_16</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th>[필수A-3]금융소비자 불이익사항 우선설명확인서</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/COM_AG_P_17.html" target="_blank">COM_AG_P_17</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th>대학생,청년층 확인서</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/COM_AG_P_18.html" target="_blank">COM_AG_P_18</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th>[필수] 대환대출 송금요청서</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/COM_AG_P_19.html" target="_blank">COM_AG_P_19</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th>[필수] 추가약정서(고액 신용대출의 사후 용도관리 강화 관련 추가약정용)</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/COM_AG_P_20.html" target="_blank">COM_AG_P_20</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th>[필수] (근)저당권설정계약서</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/COM_AG_P_21.html" target="_blank">COM_AG_P_21</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th>[햇살론 선택] 개인정보 수집·이용 동의서(상품 서비스 안내 등)</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/COM_AG_P_23.html" target="_blank">COM_AG_P_23</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th>[햇살론 필수] 신원보증신청서</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/COM_AG_P_24.html" target="_blank">COM_AG_P_24</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th>[햇살론 필수] 대출상품 추가설명서</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/COM_AG_P_25.html" target="_blank">COM_AG_P_25</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th>[필수] 개인(신용)정보 수집·이용·제공 동의서(간편서류등록)</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/COM_AG_P_26.html" target="_blank">COM_AG_P_26</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th>[햇살론 필수] 보증료 우대 서비스</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/COM_AG_P_27.html" target="_blank">COM_AG_P_27</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th>[햇살론 필수] 보증료 우대 서비스</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/COM_AG_P_28.html" target="_blank">COM_AG_P_28</a></td>
+							<td></td>
+						</tr>
+
+						<tr>
+							<th>수신상품가입하기</th>
+							<th>입출금</th>
+							<th>[바텀시트] 신청조건확인</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/BS_COM_01.html" target="_blank">BS_COM_01</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th>계좌개설 불가능</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/UBWS-05_01_1E.html" target="_blank">UBWS-05_01_1E</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th>계좌개설 사전 확인 단계</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/UBWS-05-01_01.html" target="_blank">UBWS-05-01_01</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th>[Step1] 약관 확인</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/UBWS-05-01_02.html" target="_blank">UBWS-05-01_02</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th>[공통-팝업] 이메일로 받기 체크 확인</th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/DL_COM_01.html" target="_blank">DL_COM_01</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th>[공통-팝업] 필수 동의 항목 확인</th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/DL_COM_02.html" target="_blank">DL_COM_02</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th>[공통-팝업] 해외출국여부 확인</th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/UBWS-05-01_02_PDF.html" target="_blank">UBWS-05-01_02_PDF</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th>[Step2] 고객확인사항</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/UBWS-05-01_03.html" target="_blank">UBWS-05-01_03</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th>[Step3] 금융사고예방안내</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/UBWS-05-01_04.html" target="_blank">UBWS-05-01_04</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th>[Step4] 정보 입력</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/UBWS-05-01_05.html" target="_blank">UBWS-05-01_05</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th>[팝업] 주소검색</th>
+							<th>통합검색</th>
+							<td class="end"></td>
+							<td><a href="html/PU_COM_17.html" target="_blank">PU_COM_17</a></td>
+							<td>- 지역검색 기초화면 : 'tab02' 검색</td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th>지역검색</th>
+							<td class="end"></td>
+							<td><a href="html/PU_COM_17_01.html" target="_blank">PU_COM_17_01</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th>지역검색-결과없음</th>
+							<td class="end"></td>
+							<td><a href="html/PU_COM_17_02.html" target="_blank">PU_COM_17_02</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th>상세주소</th>
+							<td class="end"></td>
+							<td><a href="html/BS_COM_17.html" target="_blank">BS_COM_17</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th>[Step5] 정보 입력</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/UBWS-05-01_06.html" target="_blank">UBWS-05-01_06</a></td>
+							<td>
+								-BS_COM_02, BS_COM_03, BS_COM_04 포함<br>
+								- '개인거래목적-결제'항목을 선택시에만 '개인거래목적'아래 버튼 표시<br>
+								- '금융정보취약계층 안내'는 만65세 이상을 선택시에만 표시
+							</td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th>[바텀시트] 직업선택</th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/BS_COM_02.html" target="_blank">BS_COM_02</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th>[팝업] 직종선택</th>
+							<th>직종 대분류</th>
+							<td class="end"></td>
+							<td><a href="html/PU_COM_33.html" target="_blank">PU_COM_33</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th>직종 중분류</th>
+							<td class="end"></td>
+							<td><a href="html/BS_COM_03_01.html" target="_blank">BS_COM_03_01</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th>[바텀시트] 개인거래목적</th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/BS_COM_04.html" target="_blank">BS_COM_04</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th>[바텀시트] 거래자금원천</th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/BS_COM_05.html" target="_blank">BS_COM_05</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th>[공통-바텀시트] 상품가입 중단 안내</th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/BS_COM_50.html" target="_blank">BS_COM_50</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th>[Step6] 통장개설 완료</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/PU_COM_50.html" target="_blank">PU_COM_50</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th>수신상품가입하기</th>
+							<th>정기예금</th>
+							<th>계좌개설 사전 확인 단계</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/UBWS-05-02_01.html" target="_blank">UBWS-05-02_01</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th>[Step1] 약관 확인</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/UBWS-05-02_02.html" target="_blank">UBWS-05-02_02</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th>[Step2] 고객확인사항</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/UBWS-05-02_03.html" target="_blank">UBWS-05-02_03</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th>[Step3] 금융사고예방안내</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/UBWS-05-02_04.html" target="_blank">UBWS-05-02_04</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th>[Step4] 정보입력</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/UBWS-05-02_05.html" target="_blank">UBWS-05-02_05</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th>[팝업] 가입기간 입력</th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/PU_COM_04.html" target="_blank">PU_COM_04</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th>[바텀시트] 과세구분 선택</th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/BS_COM_06.html" target="_blank">BS_COM_06</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th>[바텀시트] 출금계좌 선택</th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/BS_COM_07.html" target="_blank">BS_COM_07</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th>[바텀시트] 만기처리방법 선택</th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/BS_COM_08.html" target="_blank">BS_COM_08</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th>[바텀시트] 유용한 서비스(꿀머니 사용)</th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/BS_COM_09.html" target="_blank">BS_COM_09</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th>[팝업] 출금계좌 잔액부족</th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/DL_COM_03.html" target="_blank">DL_COM_03</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th>[Step5] 정보확인</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/UBWS-05-02_06.html" target="_blank">UBWS-05-02_06</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th> 
+							<th></th>
+							<th>[Step6] 가입완료</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/UBWS-05-02_07.html" target="_blank">UBWS-05-02_07</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th>수신상품가입하기</th>
+							<th>정기적금</th>
+							<th>계좌개설 사전 확인 단계</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/UBWS-05-05_01.html" target="_blank">UBWS-05-05_01</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th>[Step1] 약관확인</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/UBWS-05-05_02.html" target="_blank">UBWS-05-05_02</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th>[Step2] 고객확인사항</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/UBWS-05-05_03.html" target="_blank">UBWS-05-05_03</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th>[Step3] 금융사고예방안내</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/UBWS-05-05_04.html" target="_blank">UBWS-05-05_04</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th>[Step4] 정보입력</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/UBWS-05-05_05.html" target="_blank">UBWS-05-05_05</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th>[팝업] 가입기간 입력</th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/PU_COM_05_01.html" target="_blank">PU_COM_05_01</a></td>
+							<td>- PU_COM_05_02(만기일 선택) : 'tab02' 검색</td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th>[바텀시트] 만기일 선택 캘린더</th>
+							<td class="end"></td>
+							<td><a href="html/BS_COM_10.html" target="_blank">BS_COM_10</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th>[바텀시트] 과세구분</th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/BS_COM_06.html" target="_blank">BS_COM_06</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th>[바텀시트] 출금계좌 선택</th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/BS_COM_07.html" target="_blank">BS_COM_07</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th>[바텀시트] 출금계좌 비밀번호 입력</th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/BS_COM_11.html" target="_blank">BS_COM_11</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th>[팝업] 자동이체 신청</th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/PU_COM_06_01.html" target="_blank">PU_COM_06_01</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th>[바텀시트] 자동이체 은행 선택</th>
+							<td class="end"></td>
+							<td><a href="html/BS_COM_12.html" target="_blank">BS_COM_12</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th>[바텀시트] 이체날짜 선택</th>
+							<td class="end"></td>
+							<td><a href="html/BS_COM_13.html" target="_blank">BS_COM_13</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th>[바텀시트] 만기처리방법 선택</th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/BS_COM_14.html" target="_blank">BS_COM_14</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th>[바텀시트] 만기 SMS 통지 선택</th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/BS_COM_15.html" target="_blank">BS_COM_15</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th>[바텀시트] 유용한 서비스(꿀머니 사용)</th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/BS_COM_09.html" target="_blank">BS_COM_09</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th>[Step5] 정보확인</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/UBWS-05-05_06.html" target="_blank">UBWS-05-05_06</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th>[Step6] 가입완료</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/UBWS-05-05_07.html" target="_blank">UBWS-05-05_07</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th>여신상품</th>
+							<th>비타WON신용대출</th>
+							<th>[Step1] 신청단계</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/UBWS-06-01_01.html" target="_blank">UBWS-06-01_01</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th>[Step2] 약관확인</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/UBWS-06-01_02.html" target="_blank">UBWS-06-01_02</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th>본인인증</th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/PU_COM_14_2.html" target="_blank">PU_COM_14_2</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th>[Step3] 한도조회</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/UBWS-06-01_03.html" target="_blank">UBWS-06-01_03</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th>[Step4] 간편서류제출 안내</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/UBWS-06-01_04.html" target="_blank">UBWS-06-01_04</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th>서류제출 간편인증</th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/UBWS-06-01_04_서류제출간편인증.html" target="_blank">UBWS-06-01_04_서류제출간편인증</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th>[Step4] 대출 한도 및 금리안내</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/UBWS-06-01_05.html" target="_blank">UBWS-06-01_05</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th>[팝업] 적합성·적정성 확인서</th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/PU_COM_15.html" target="_blank">PU_COM_15</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th>[팝업] 고객확인사항</th>
+							<td class="end"></td>
+							<td><a href="html/PU_COM_16.html" target="_blank">PU_COM_16</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th>[Step4] 대출신청 정보 입력</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/UBWS-06-01_06.html" target="_blank">UBWS-06-01_06</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th>[바텀시트] 직종검색</th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/PU_COM_33.html" target="_blank">PU_COM_33</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th>[바텀시트] 상품가입 중단</th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/BS_COM_51.html" target="_blank">BS_COM_51</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th>[Step4] 대출신청 정보 입력_2</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/UBWS-06-01_07.html" target="_blank">UBWS-06-01_07</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th>입력 정보 확인</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/UBWS-06-01_08.html" target="_blank">UBWS-06-01_08</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th>안내사항 고지</th>
+							<th>[팝업] 보이스피싱 예방 문진표</th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/PU_COM_19.html" target="_blank">PU_COM_19</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th>[팝업] 방문판매 확인서</th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/PU_COM_20.html" target="_blank">PU_COM_20</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th>[팝업] 대학생·청년층 확인서</th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/PU_COM_21.html" target="_blank">PU_COM_21</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th>[팝업] CMS 동의</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/PU_COM_22.html" target="_blank">PU_COM_22</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th>[팝업] 전자서명 약관</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/PU_COM_23.html" target="_blank">PU_COM_23</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th>[팝업] 송금계좌번호 확인</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/PU_COM_24.html" target="_blank">PU_COM_24</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th>입금자 번호 확인</th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/PU_COM_24-01.html" target="_blank">PU_COM_24-01</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th>[Step5] 대출송금 완료</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/PU_COM_52.html" target="_blank">PU_COM_52</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th>비타WON긴급대출</th>
+							<th>[Step1] 신청단계</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/UBWS-06-02_01.html" target="_blank">UBWS-06-02_01</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th>[팝업] 한도조회를 위한 개인정보 입력</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/PU_COM_25.html" target="_blank">PU_COM_25</a></td>
+							<td>- PU_COM_25(자영업자/프리랜서 선택) : 'tab02' 검색</td>
+						</tr>
+						<tr>
+							<th></th>
+							<th>우리WON햇살론</th>
+							<th>[Step1] 신청단계</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/UBWS-06-03_01.html" target="_blank">UBWS-06-03_01</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th>[팝업] 한도조회를 위한 개인정보 입력</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/PU_COM_25.html" target="_blank">PU_COM_25</a></td>
+							<td>- PU_COM_25(자영업자/프리랜서 선택) : 'tab02' 검색</td>
+						</tr>
+						<tr>
+							<th></th>
+							<th>사잇돌2</th>
+							<th>[Step1] 신청단계</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/UBWS-06-04_01.html" target="_blank">UBWS-06-04_01</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th>[팝업] 한도조회를 위한 개인정보 입력</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/PU_COM_26.html" target="_blank">PU_COM_26</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th>입출금 즉시이체</th>
+							<th>입출금 이체하기</th>
+							<th>이체하기-최근 사용 계좌</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/UBWS-07-01.html" target="_blank">UBWS-07-01</a></td>
+							<td>- 즐겨찾는 이체 버튼에 따른 토스트 메시지 포함</td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th>최근 입금계좌 편집</th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/PU_COM_30.html" target="_blank">PU_COM_30</a></td>
+							<td>- 최근 입금계좌 삭제 성공 토스트 메시지 포함</td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th>[공통-팝업] 최근 입금계좌 삭제 실패</th>
+							<td class="end"></td>
+							<td><a href="html/DL_COM_04.html" target="_blank">DL_COM_04</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th>이체하기-자주 쓰는 계좌</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/UBWS-07-01_01.html" target="_blank">UBWS-07-01_01</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th>자주 쓰는 계좌 관리</th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/UBWS-08-07.html" target="_blank">UBWS-08-07</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th>자주 쓰는 계좌 등록 내역 없음</th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/UBWS-08-07_01.html" target="_blank">UBWS-08-07_01</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th>자주 쓰는 계좌 등록하기</th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/UBWS-08-07_02.html" target="_blank">UBWS-08-07_02</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th>[바텀시트] 입금계좌 선택</th>
+							<td class="end"></td>
+							<td><a href="html/BS_COM_18.html" target="_blank">BS_COM_18</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th>[바텀시트] 입금계좌 선택(직접입력)</th>
+							<td class="end"></td>
+							<td><a href="html/BS_COM_18-02.html" target="_blank">BS_COM_18-02</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th>[바텀시트] 입금계좌 선택(직접입력) - 은행 선택</th>
+							<td class="end"></td>
+							<td><a href="html/BS_COM_12.html" target="_blank">BS_COM_12</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th>자주 쓰는 계좌 등록 정보 확인</th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/UBWS-08-07_03.html" target="_blank">UBWS-08-07_03</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th>[팝업] 자주 쓰는 계좌 등록 확인 팝업</th>
+							<td class="end"></td>
+							<td><a href="html/DL_COM_31.html" target="_blank">DL_COM_31</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th>[팝업] 자주 쓰는 계좌 등록 미작성 항목 확인</th>
+							<td class="end"></td>
+							<td><a href="html/DL_COM_31-01.html" target="_blank">DL_COM_31-01</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th>이체하기-내 계좌</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/UBWS-07-01_02.html" target="_blank">UBWS-07-01_02</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th>이체하기-계좌번호 입력</th>
+							<th>은행 선택</th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/UBWS-07-01_03.html" target="_blank">UBWS-07-01_03</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th>기관 선택</th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/UBWS-07-01_03_stock.html" target="_blank">UBWS-07-01_03_stock</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th>계좌번호 입력</th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/UBWS-07-01_04.html" target="_blank">UBWS-07-01_04</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th>[팝업] 계좌번호 오류 팝업</th>
+							<td class="end"></td>
+							<td><a href="html/DL_COM_05.html" target="_blank">DL_COM_05</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th>[팝업] 계좌번호 오류 팝업(고객센터 문의)</th>
+							<td class="end"></td>
+							<td><a href="html/DL_COM_06.html" target="_blank">DL_COM_06</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th>출금 계좌 설정 및 이체금액 입력</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/UBWS-07-01_05.html" target="_blank">UBWS-07-01_05</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th>출금액 입력 후 화면</th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/UBWS-07-01_05_01.html" target="_blank">UBWS-07-01_05_01</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th>출금액이 출금가능 금액보다 클 경우 화면</th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/UBWS-07-01_05_02.html" target="_blank">UBWS-07-01_05_02</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th>입출금 기록 설정 화면</th>
+							<th></th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/UBWS-07-01_06.html" target="_blank">UBWS-07-01_06</a></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th>[바텀시트] 이체 유의사항</th>
+							<th></th>
+							<td class="end"></td>
+							<td><a href="html/BS_COM_23.html" target="_blank">BS_COM_23</a></td>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			
+			<div class="h-box" id="history" style="display:none;">
+				<div class="index-link">
+					<a href="index.html">mobile </a>
+					<a href="#history" class="on">history</a>
+				</div>
+
+				<h3>history</h3>
+				<div class="history">
+					<ul>			
+						<li>
+							<strong>2021.00.00</strong>
+							<ul>								
+								<li>
+									<p></p>
+								</li>	
+								<li></li>	
+								<li>							
+									<ul class="list-d">	
+										<li>1)</li>
+										<li>2)</li>
+										<li>3)</li>
+										<li>4)</li>										
+									</ul>
+									<p></p>
+								</li>								
+							</ul>
+							<ul>
+								<li class="new"></li>
+								<li class="all"></li>
+								<li></li>
+								<li>
+									<p></p>
+								</li>
+							</ul>
+						</li>																				
+					</ul>
+				</div>
+			</div>
+			
+			<div class="fix-btn">
+				<a href="#top">TOP</a>
+				<!-- <a href="index.html">파일 리스트 보기</a>
+				<a href="#history">HISTORY</a> -->
+			</div>
+		</div>
+	</body>
+</html>

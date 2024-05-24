@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>우리금융저축은행</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0, width=device-width, viewport-fit=cover" />
+  <meta name="format-detection" content="telephone=no" />
+
+  <script type="text/javascript" src="../js/jquery-3.3.1.js"></script>
+  <script type="text/javascript" src="../js/jquery-ui.js"></script>
+  <script type="text/javascript" src="../js/swiper.min.js"></script>     
+  <script type="text/javascript" src="../js/common.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="../css/common.css">   
+</head>
+<body>
+  <div id="wrap">
+    <!-- header -->
+    <header>
+      <strong>보이스피싱예방 사전안내</strong>
+      <button type="button" class="btn-close" onclick="history.back(-1);">취소</button>
+    </header>
+    <!-- //header -->
+
+    <!-- content --> 
+    <div class="content">
+      <div class="cont-box">
+        <div class="agree-box">
+          <div class="question-box">
+            <h5>금융회사 직원과 대출 상담을 하다가 이체하시나요?</h5>
+            <div class="custom-rdo type04">
+              <div class="custom-rdo-item">
+                <input type="radio" id="custom-item01_1" name="rdo01">
+                <label for="custom-item01_1" class="inp-rdo">
+                  <span class="b2 txt-default">예</span>
+                </label>  
+              </div>
+              <div class="custom-rdo-item">
+                <input type="radio" id="custom-item01_2" name="rdo01">
+                <label for="custom-item01_2" class="inp-rdo">
+                  <span class="b2 txt-default">아니오</span>
+                </label>
+              </div>
+            </div>  
+          </div>
+          <div class="question-box">
+            <h5>경찰, 검찰, 금감원이 범죄에 연루되었다고 하여 이체를 요청하나요?</h5>
+            <div class="custom-rdo type04">
+              <div class="custom-rdo-item">
+                <input type="radio" id="custom-item02_1" name="rdo02">
+                <label for="custom-item02_1" class="inp-rdo">
+                  <span class="b2 txt-default">예</span>
+                </label>  
+              </div>
+              <div class="custom-rdo-item">
+                <input type="radio" id="custom-item02_2" name="rdo02">
+                <label for="custom-item02_2" class="inp-rdo">
+                  <span class="b2 txt-default">아니오</span>
+                </label>
+              </div>
+            </div>  
+          </div>
+        </div>
+      </div>
+      <div class="btn-box-fixed">
+        <div class="btn-box">
+          <button type="button" class="btn-lg btn-p h5">확인</button>
+          <!-- 기본 -->
+          <button type="button" class="btn-lg btn-p on h5" style="display: none;">확인</button>
+          <!-- 선택 -->
+          <button type="button" class="btn-lg btn-p disable h5" style="display: none;">확인</button>
+          <!-- 비활성화 -->
+        </div>
+      </div>
+    </div>
+    <!-- //content -->
+  </div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>우리금융저축은행</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0, width=device-width, viewport-fit=cover" />
+  <meta name="format-detection" content="telephone=no" />
+
+  <script type="text/javascript" src="../js/jquery-3.3.1.js"></script>
+  <script type="text/javascript" src="../js/jquery-ui.js"></script>
+  <script type="text/javascript" src="../js/swiper.min.js"></script>     
+  <script type="text/javascript" src="../js/common.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="../css/common.css">   
+</head>
+<body>
+  <div id="wrap">
+    <!-- header -->
+    <header>
+      <button type="button" class="btn-back" onclick="history.back(-1);">뒤로가기</button>
+      <strong>첫번째 저축예금 계좌 개설</strong>
+    </header>
+    <!-- //header -->
+
+    <!-- content --> 
+    <div class="content">
+      <div class="cont-box">
+        <div class="tit-box">
+          <h3>계좌 개설을 위해<br>사전 확인단계가 필요해요</h3>
+          <h6 class="tit-sub">사전준비사항</h6>
+        </div>
+      </div>
+      <div class="step-box">
+        <ul>
+          <li class="step-ico01">
+            <div class="icon_area">
+              <img src="../images/ico_id.svg" alt="">
+            </div>
+            <div class="txt_area">
+              <span class="step_no b2 txt-default03">STEP1</span>
+              <div class="h6">신분증(주민등록증 또는 운전면허증)을<br>가지고 계셔야 해요.</div>
+            </div>
+          </li>
+          <li class="step-ico02">
+            <div class="icon_area">
+              <img src="../images/ico_account.svg" alt="">
+            </div>
+            <div class="txt_area">
+              <span class="step_no b2 txt-default03">STEP2</span>
+              <div class="h6">온라인에서 확인 가능한 본인명의의<br>입출금 계좌를 준비해 주세요.</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="btn-box-fixed">
+        <div class="btn-box">
+          <button type="button" class="btn-lg btn-p h5">네, 확인했어요</button> 
+          <!-- 기본 -->
+          <button type="button" class="btn-lg btn-p h5 on" style="display: none;">네, 확인했어요</button>
+          <!-- 선택 -->
+          <button type="button" class="btn-lg btn-p h5 disable" style="display: none;">네, 확인했어요</button>
+          <!-- 비활성화 -->
+        </div>
+      </div>
+    </div>
+    <!-- //content -->
+  </div>
+</body>
+</html>

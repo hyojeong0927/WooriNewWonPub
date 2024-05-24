@@ -1,0 +1,147 @@
+ <!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>우리금융저축은행</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0, width=device-width, viewport-fit=cover" />
+  <meta name="format-detection" content="telephone=no" />
+
+  <script type="text/javascript" src="../js/jquery-3.3.1.js"></script>
+  <script type="text/javascript" src="../js/jquery-ui.js"></script>
+  <script type="text/javascript" src="../js/swiper.min.js"></script>     
+  <script type="text/javascript" src="../js/common.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="../css/common.css">   
+</head>
+<body>
+  <div id="wrap">
+    <!-- header -->
+    <header>
+      <button type="button" class="btn-back" onclick="history.back(-1);">뒤로가기</button>
+      <strong>첫번째 저축예금 계좌 개설</strong>
+      <button type="button" class="btn-close_txt" onclick="history.back(-1);">취소</button>
+    </header>
+    <!-- //header -->
+
+    <!-- content --> 
+    <div class="content">
+      <div class="cont-box">
+        <div class="tit-step d2"><span class="d2">04</span> / 05</div>
+        <div class="tit-box">
+          <h3>대출신청 정보를 입력해 주세요</h3>
+        </div>
+        <div class="agree-box">
+          <form action="#none" class="form-input">
+            <fieldset>
+              <legend>개인정보 입력 폼그룹</legend>
+              <div class="inp-box">
+                <div class="form-tit b2_dense">현주소</div>
+                <div class="form-cont">
+                  <input type="text" class="inp-addr h5_dense" name="" id="inpName" placeholder="실거주지 주소를 입력하세요"><button type="button" class="btn-search">검색</button>
+                </div>
+              </div>
+              <div class="inp-box">
+                <div class="form-tit b2_dense">직장명</div>
+                <div class="form-cont">
+                  <input type="text" class="inp-addr h5_dense" name="" id="inpName" placeholder="직장명을 입력하세요">
+                </div>
+              </div>
+              <div class="inp-box">
+                <div class="form-tit b2_dense">직장 주소</div>
+                <div class="form-cont">
+                  <input type="text" class="inp-addr h5_dense" name="" id="inpName" placeholder="직장주소를 입력하세요"><button type="button" class="btn-search">검색</button>
+                </div>
+              </div>
+              <div class="inp-box">
+                <div class="form-tit b2_dense">직종</div>
+                <div class="form-cont">
+                  <input type="text" class="inp-addr h5_dense" name="" id="inpName" placeholder="직종을 검색하세요"><button type="button" class="btn-search" data-view="job02-box">검색</button>
+                  <!-- 직업 선택창 : 직종 대분류 -->
+                  <div class="job02-box toggle-box">
+                    <div class="toggle">
+                        <div class="tit-box">
+                            <strong class="h4">직종 검색</strong>
+                            <button type="button" class="btn-close">닫기</button>
+                        </div>
+                        <div class="sch-box">
+                          <div class="sch-txt">
+                            <div class="b1">아래의 직군을 선택하거나, 직종을 검색하세요.</div>
+                            <ul class="list-type03">
+                              <li>직종 검색어 입력 예시를 확인해 주세요.<br>예) 사무, 연구, 기술, 조작, 조립 등</li>
+                            </ul>
+                          </div>
+                          <div class="sch-box02">
+                            <button type="button" class="btn-search">검색</button><input type="text" class="inp-sch h5_dense" name="" id="inpName" placeholder="직종 키워드를 입력하세요">
+                          </div>
+                        </div>
+                        <div class="list-box">
+                          <ul>
+                              <li><button type="button" class="h6 select">관리자</button></li>
+                              <li><button type="button" class="h6">전문가 및 관련종사자</button></li>
+                              <li><button type="button" class="h6">사무종사자</button></li>
+                              <li><button type="button" class="h6">서비스 종사자</button></li>
+                              <li><button type="button" class="h6">판매 종사자</button></li>
+                              <li><button type="button" class="h6">농업·어업 숙련종사자</button></li>
+                              <li><button type="button" class="h6">기능원 및 관련기능 종사자</button></li>
+                              <li><button type="button" class="h6">장치·기계 조작 및 조립 종사자</button></li>
+                              <li><button type="button" class="h6">단순노무 종사자</button></li>
+                              <li><button type="button" class="h6">군인</button></li>
+                              <li><button type="button" class="h6">기타</button></li>
+                          </ul>
+                        </div>
+                    </div>
+                  </div>
+                  <!-- //직업 선택창 : 직종 대분류-->
+                </div>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+        <div class="btn-box-fixed">
+          <div class="btn-box">
+            <button type="button" class="btn-lg btn-p h5">확인</button>
+            <!-- 기본 -->
+            <button type="button" class="btn-lg btn-p h5 on" style="display: none;">확인</button>
+            <!-- 선택 -->
+            <button type="button" class="btn-lg btn-p h5 disable" style="display: none;">확인</button>
+            <!-- 비활성화 -->
+          </div>
+        </div>
+        <!-- 상품가입 중단 안내창 -->
+        <div class="cancel-box toggle-box" style="display: block;">
+          <div class="toggle">
+            <div class="tit-box">
+              <strong class="h4">상품가입을 그만하시겠어요?</strong>
+              <button type="button" class="btn-close">닫기</button>
+            </div>
+            <div class="cancel-box">
+              <div class="cancel-txt b1 txt-default02">상품가입을 중단해도 '상품몰 > 이어서 가입하기'<br>메뉴에서 다시 진행할 수 있어요.</div>
+              <h6>만약, 상품가입이 어려우시다면<br>전문 상담직원이 도와드리겠습니다.</h6>
+              <div class="btn-box">
+                <button type="button" class="btn-md btn-s btn-call h5"><span class="btn-call_icon"><img src="../images/icon_phone_bg.svg" alt=""></span>전화상담</button>
+              </div>
+            </div>
+            <div class="btn-box asym">
+              <button type="button" class="btn-lg btn-t btn-w100 h5">그만하기</button>
+              <!-- 기본 -->
+              <button type="button" class="btn-lg btn-t btn-w100 on h5" style="display: none;">그만하기</button>
+              <!-- 선택 -->
+              <button type="button" class="btn-lg btn-t btn-w100 disable h5" style="display: none;">그만하기</button>
+              <!-- 비활성화 -->
+              <button type="button" class="btn-lg btn-p btn-w220 h5">계속진행하기</button>
+              <!-- 기본 -->
+              <button type="button" class="btn-lg btn-p btn-w220 on h5" style="display: none;">계속진행하기</button>
+              <!-- 선택 -->
+              <button type="button" class="btn-lg btn-p btn-w220 disable h5" style="display: none;">계속진행하기</button>
+              <!-- 비활성화 -->
+            </div>
+          </div>
+        </div>
+        <!-- //상품가입 중단 안내창 -->
+      </div>
+    </div>
+    <!-- //content -->
+  </div>
+</body>
+</html>

@@ -1,0 +1,119 @@
+ <!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>우리금융저축은행</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0, width=device-width, viewport-fit=cover" />
+  <meta name="format-detection" content="telephone=no" />
+
+  <script type="text/javascript" src="../js/jquery-3.3.1.js"></script>
+  <script type="text/javascript" src="../js/jquery-ui.js"></script>
+  <script type="text/javascript" src="../js/swiper.min.js"></script>     
+  <script type="text/javascript" src="../js/common.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="../css/common.css">   
+</head>
+<body>
+  <div id="wrap">
+    <!-- header -->
+    <header>
+      <button type="button" class="btn-back" onclick="history.back(-1);">뒤로가기</button>
+      <strong>첫번째 저축예금 계좌 개설</strong>
+      <button type="button" class="btn-close_txt" onclick="history.back(-1);">취소</button>
+    </header>
+    <!-- //header -->
+
+    <!-- content --> 
+    <div class="content">
+      <div class="cont-box">
+        <div class="tit-step d2"><span class="d2">04</span> / 06</div>
+        <div class="tit-box">
+          <h3>비대면 금융거래를 위해<br>고객님의 정보 입력이 필요해요</h3>
+        </div>
+        <div class="agree-box">
+          <form action="#none" class="form-input">
+            <fieldset>
+              <legend>개인정보 입력 폼그룹</legend>
+              <div class="inp-box name-box">
+                <div class="form-tit b2_dense">김</div><div class="form-tit b2_dense">우리</div>
+                <div class="form-cont">
+                  <input type="text" class="inp-1stName h5_dense" name="" id="inpName" placeholder="영문 성 입력">
+                </div>
+                <div class="form-cont">
+                  <input type="text" class="inp-2ndName h5_dense" name="" id="inpName" placeholder="영문 이름 입력">
+                </div>
+              </div>
+              <div class="inp-box disable">
+                <div class="form-tit b2_dense">휴대폰 번호</div>
+                <div class="form-cont">
+                  <input type="text" class="h5_dense" name="" id="inpBank" placeholder="(-) 제외하고 입력" value="01012345678" disabled>
+                </div>
+              </div>
+              <div class="inp-box">
+                <div class="form-tit b2_dense">자택 주소</div>
+                <div class="form-cont">
+                  <input type="text" class="inp-addr h5_dense" name="" id="inpName" placeholder="주소 입력"><button type="button" class="btn-search">검색</button>
+                </div>
+              </div>
+              <div class="inp-box type02">
+                <div class="form-tit b2_dense">이메일</div>
+                <div class="form-cont">
+                  <input type="text" class="h5_dense" name="" id="inpEmail" placeholder="이메일 주소를 입력하세요" value="">
+                </div>
+              </div>
+              <div class="txt-caption">
+                <ul class="list-type01">
+                  <li class="b2 txt-default03">
+                    해당 이메일로 약관 및 상품설명서가 발송됩니다.
+                  </li>
+                </ul>
+              </div>
+              <div class="inp-box type03">
+                <div class="form-tit b2_dense">연락 구분</div>
+                <div class="custom-rdo type04">
+                  <div class="custom-rdo-item">
+                    <input type="radio" id="custom-item02_1" name="rdo01" checked>
+                    <label for="custom-item02_1" class="inp-rdo">
+                      <span class="b2 txt-default">연락거부</span>
+                    </label>  
+                  </div>
+                  <div class="custom-rdo-item">
+                    <input type="radio" id="custom-item02_2" name="rdo01">
+                    <label for="custom-item02_2" class="inp-rdo">
+                      <span class="b2 txt-default">휴대전화</span>
+                    </label>
+                  </div>
+                  <div class="custom-rdo-item">
+                    <input type="radio" id="custom-item02_3" name="rdo01">
+                    <label for="custom-item02_3" class="inp-rdo">
+                      <span class="b2 txt-default">우편물</span>
+                    </label>
+                  </div>
+                  <div class="custom-rdo-item">
+                    <input type="radio" id="custom-item02_4" name="rdo01">
+                    <label for="custom-item02_4" class="inp-rdo">
+                      <span class="b2 txt-default">이메일</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+        <div class="btn-box-fixed">
+          <div class="btn-box">
+            <button type="button" class="btn-lg btn-p h5">모두 입력했어요</button>
+            <!-- 기본 -->
+            <button type="button" class="btn-lg btn-p h5 on" style="display: none;">모두 입력했어요</button>
+            <!-- 선택 -->
+            <button type="button" class="btn-lg btn-p h5 disable" style="display: none;">모두 입력했어요</button>
+            <!-- 비활성화 -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- //content -->
+  </div>
+</body>
+</html>

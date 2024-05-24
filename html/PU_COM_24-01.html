@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>우리금융저축은행</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0, width=device-width, viewport-fit=cover" />
+  <meta name="format-detection" content="telephone=no" />
+
+  <script type="text/javascript" src="../js/jquery-3.3.1.js"></script>
+  <script type="text/javascript" src="../js/jquery-ui.js"></script>
+  <script type="text/javascript" src="../js/swiper.min.js"></script>     
+  <script type="text/javascript" src="../js/common.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="../css/common.css">   
+</head>
+<body>
+  <div id="wrap">
+    <!-- header -->
+    <header>
+      <button type="button" class="btn-back" onclick="history.back(-1);">뒤로가기</button>
+      <strong>비타WON신용대출</strong>
+      <button type="button" class="btn-close_txt" onclick="history.back(-1);">취소</button>
+    </header>
+    <!-- //header -->
+
+    <!-- content --> 
+    <div class="content">
+      <div class="cont-box">
+        <div class="tit-box">
+          <h3 style="letter-spacing: -1px;">입력하신 계좌로 <span class="h3 txt-primary">1원</span>을 보내드렸습니다.<br>입금자로 표시된 <span class="h3 txt-primary">우리 뒤 4자리</span> 숫자를 입력해주세요.</h3>
+        </div>
+      </div>
+      <div class="data-box type02">
+        <div class="list-box bg">
+          <table>
+            <colgroup>
+              <col style="width: 31%;">
+              <col style="width: 69%;">
+            </colgroup>
+            <tbody>
+              <tr>
+                <th class="th-row02 ta-l b1">입금</th>
+                <td class="td-row02 ta-r b1">1원</td>
+              </tr>
+              <tr>
+                <th class="th-row02 ta-l b1">보낸사람</th>
+                <td class="td-row02 ta-r b1">우리****</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="agree-box">
+        <form action="#none" class="form-input">
+          <fieldset>
+            <legend>입금자명 입력 폼그룹</legend>
+            <div class="inp-box type02">
+              <div class="form-tit b2_dense">입금자명(인증문자)</div>
+              <div class="form-cont">
+                <input type="text" class="inp_half h5_dense" name="" id="inpEmail02" placeholder="이메일 주소를 입력하세요" value="1234">
+              </div>
+            </div>
+            <div class="txt-caption03 txt-critical b2"><span class="ico-error"></span>숫자 4자리를 입력해주세요</div>
+          </fieldset>
+        </form>
+      </div>
+      <div class="btn-box-fixed">
+        <div class="btn-box">
+          <button type="button" class="btn-lg btn-p h5">확인</button>
+          <!-- 기본 -->
+          <button type="button" class="btn-lg btn-p on h5" style="display: none;">확인</button>
+          <!-- 선택 -->
+          <button type="button" class="btn-lg btn-p disable h5" style="display: none;">확인</button>
+          <!-- 비활성화 -->
+        </div>
+      </div>
+    </div>
+    <!-- //content -->
+  </div>
+</body>
+</html>

@@ -1,0 +1,141 @@
+ <!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>우리금융저축은행</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0, width=device-width, viewport-fit=cover" />
+  <meta name="format-detection" content="telephone=no" />
+
+  <script type="text/javascript" src="../js/jquery-3.3.1.js"></script>
+  <script type="text/javascript" src="../js/jquery-ui.js"></script>
+  <script type="text/javascript" src="../js/swiper.min.js"></script>     
+  <script type="text/javascript" src="../js/common.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="../css/common.css">   
+</head>
+<body>
+  <div id="wrap">
+    <!-- header -->
+    <header>
+      <strong>최근 입금계좌 편집</strong>
+      <button type="button" class="btn-close" onclick="history.back(-1);">취소</button>
+    </header>
+    <!-- //header -->
+
+    <!-- content --> 
+    <div class="content">
+      <div class="cont-box">
+        <div class="transfer-box">
+          <div class="transfer-list_edit">
+            <ul>
+              <li>
+                <div class="recent-account">
+                  <label for="recent-chk01">
+                    <div class="btn-bank_account select">
+                      <div class="ico_bank ico-bank020"></div>
+                      <div class="info_bank ta-l">
+                        <div class="recent-tit">
+                          <span class="h6 txt-default">박우리</span>
+                          <span class="b2 txt-default04">2024.01.28</span>
+                        </div>
+                        <div class="recent-accountNo b2 txt-default04">우리 100-122343-12-456</div>
+                      </div>
+                    </div>
+                  </label>
+                  <input type="checkbox" id="recent-chk01" checked>
+                </div>
+              </li>
+              <li>
+                <div class="recent-account">
+                  <label for="recent-chk02">
+                    <div class="btn-bank_account select">
+                      <div class="ico_bank ico-bank090"></div>
+                      <div class="info_bank ta-l">
+                        <div class="recent-tit">
+                          <span class="h6 txt-default">카우리</span>
+                          <span class="b2 txt-default04">2023.12.27</span>
+                        </div>
+                        <div class="recent-accountNo b2 txt-default04">카카오 111-115926-01-222</div>
+                      </div>
+                    </div>
+                  </label>
+                  <input type="checkbox" id="recent-chk02">
+                </div>
+              </li>
+              <li>
+                <div class="recent-account">
+                  <label for="recent-chk03">
+                    <div class="btn-bank_account select">
+                      <div class="ico_bank ico-bank020"></div>
+                      <div class="info_bank ta-l">
+                        <div class="recent-tit">
+                          <span class="h6 txt-default">김우리</span>
+                          <span class="b2 txt-default04">2024.01.14</span>
+                        </div>
+                        <div class="recent-accountNo b2 txt-default04">우리 100-122343-12-456</div>
+                      </div>
+                    </div>
+                  </label>
+                  <input type="checkbox" id="recent-chk03">
+                </div>
+              </li>
+              <li>
+                <div class="recent-account">
+                  <label for="recent-chk04">
+                    <div class="btn-bank_account select">
+                      <div class="ico_bank ico-bank092"></div>
+                      <div class="info_bank ta-l">
+                        <div class="recent-tit">
+                          <span class="h6 txt-default">황우리</span>
+                          <span class="b2 txt-default04">2024.01.11</span>
+                        </div>
+                        <div class="recent-accountNo b2 txt-default04">토스 100-122343-12-456</div>
+                      </div>
+                    </div>
+                  </label>
+                  <input type="checkbox" id="recent-chk04">
+                </div>
+              </li>
+              <li>
+                <div class="recent-account">
+                  <label for="recent-chk05">
+                    <div class="btn-bank_account select">
+                      <div class="ico_bank ico-bank020"></div>
+                      <div class="info_bank ta-l">
+                        <div class="recent-tit">
+                          <span class="h6 txt-default">최우리</span>
+                          <span class="b2 txt-default04">2024.01.05</span>
+                        </div>
+                        <div class="recent-accountNo b2 txt-default04">우리 100-122343-12-456</div>
+                      </div>
+                    </div>
+                  </label>
+                  <input type="checkbox" id="recent-chk05">
+                </div>
+              </li>
+            </ul>
+            
+            <!-- Toast 메세지 -->
+            <div class="toast-msg success">
+              <div class="ico-success b1">최근 입금계좌를 삭제했어요</div>
+            </div>
+            <!-- //Toast 메세지 -->
+          </div>  
+        </div>
+      </div>
+      <div class="btn-box-fixed">
+        <div class="btn-box">
+          <button type="button" class="btn-lg btn-p h5">삭제</button>
+          <!-- 기본 -->
+          <button type="button" class="btn-lg btn-p h5 on" style="display: none;">삭제</button>
+          <!-- 선택 -->
+          <button type="button" class="btn-lg btn-p h5 disable" style="display: none;">삭제</button>
+          <!-- 비활성화 -->
+        </div>
+      </div>
+    </div>
+    <!-- //content -->
+  </div>
+</body>
+</html>

@@ -1,0 +1,126 @@
+ <!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>우리금융저축은행</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0, width=device-width, viewport-fit=cover" />
+  <meta name="format-detection" content="telephone=no" />
+
+  <script type="text/javascript" src="../js/jquery-3.3.1.js"></script>
+  <script type="text/javascript" src="../js/jquery-ui.js"></script>
+  <script type="text/javascript" src="../js/swiper.min.js"></script>     
+  <script type="text/javascript" src="../js/common.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="../css/common.css">
+</head>
+<body>
+  <div id="wrap">
+    <!-- header -->
+    <header>
+      <button type="button" class="btn-close" onclick="history.back(-1);">취소</button>
+    </header>
+    <!-- //header -->
+
+    <!-- content --> 
+    <div class="content">
+      <div class="cont-box">
+        <div class="agree-box">
+          <h5 class="txt-default01">가입기간을 입력해주세요</h5>
+          <div class="tab-seg item2">
+            <ul>
+              <li data-tab="tab01" class="btn-tab on">
+                <button type="button" class="b2_dense">개월수로 선택</button>
+              </li>
+              <li data-tab="tab02" class="btn-tab">
+                <button type="button" class="b2_dense">만기일로 선택</button>
+              </li>
+            </ul>
+          </div>
+          <div class="tab-con tab01 on">
+            <form action="#none" class="form-input">
+              <fieldset>
+                <legend>가입기간 개월수 선택 및 납입금액 입력 폼그룹</legend>
+                <div class="inp-box type02">
+                  <!-- 개월수로 선택 -->
+                  <div class="form-tit b2_dense">가입기간</div>
+                  <div class="form-cont">
+                    <input type="text" class="h5_dense ta-r" name="" id="inpPeriod" placeholder="000" value=""><span class="h5_dense txt-default" style="margin-left: 2px;">개월</span>
+                  </div>
+                  <!-- //개월수로 선택 -->
+                  <div class="txt-caption info_caption txt-default04 ta-c b2_dense"><span><img src="../images/ico_info_xsm.png" alt=""></span>가입기간 : 1개월 ~ 36개월</div>
+                </div>
+                <h5 class="txt-default01" style="margin-top: 24px;">월 납입 금액을 입력해주세요</h5>
+                <div class="inp-box type02">
+                  <div class="form-tit b2_dense">월 납입 금액</div>
+                  <div class="form-cont">
+                    <input type="text" class="h5_dense ta-r" name="" id="inpDeposit" placeholder="000,000,000,000" value=""><span class="h5_dense txt-default" style="margin-left: 2px;">원</span>
+                  </div>
+                </div>
+                <div class="txt-caption info_caption txt-default04 ta-c b2_dense"><span><img src="../images/ico_info_xsm.png" alt=""></span>납입가능 금액 10만원 이상</div>
+              </fieldset>
+            </form>
+          </div>
+          
+          <div class="tab-con tab02">
+            <form action="#none" class="form-input">
+              <fieldset>
+                <legend>가입기간 만기일 선택 및 납입금액 입력 폼그룹</legend>
+                <div class="inp-box type02">
+                  <!-- 만기일로 선택 -->
+                  <div class="form-tit b2_dense">만기일 선택</div>
+                  <div class="form-cont">
+                    <button type="button" class="btn-calendar" data-view="calendar-box">날짜선택</button><input type="text" class="inp-date h5_dense" name="" id="inpName" placeholder="0000.00.00">
+                  </div>
+                  <div class="txt-caption info_caption txt-default04 ta-c b2_dense"><span><img src="../images/ico_info_xsm.png" alt=""></span>가입기간 : 1개월 ~ 36개월</div>
+                  <!-- 만기일 선택창 -->
+                  <div class="calendar-box toggle-box">
+                    <div class="toggle">
+                      <div class="tit-box">
+                        <strong class="h4">날짜 선택</strong>
+                        <button type="button" class="btn-close">닫기</button>
+                      </div>
+                      <div class="list-box">
+                        <div id="datepicker"></div>
+                      </div>
+                      <div class="btn-box">
+                        <button type="button" class="btn-close2 btn-lg btn-p h5">2024년 4월 6일 선택</button>
+                        <!-- 기본 -->
+                        <button type="button" class="btn-close2 btn-lg btn-p on h5" style="display: none;">2024년 4월 6일 선택</button>
+                        <!-- 선택 -->
+                        <button type="button" class="btn-close2 btn-lg btn-p disable h5" style="display: none;">2024년 4월 6일 선택</button>
+                        <!-- 비활성화 -->
+                      </div>
+                    </div>
+                  </div>
+                  <!-- //만기일 선택창-->
+                  <!-- //만기일로 선택 -->
+                </div>
+                <h5 class="txt-default01" style="margin-top: 24px;">월 납입 금액을 입력해주세요</h5>
+                <div class="inp-box type02">
+                  <div class="form-tit b2_dense">월 납입 금액</div>
+                  <div class="form-cont">
+                    <input type="text" class="h5_dense ta-r" name="" id="inpDeposit" placeholder="000,000,000,000" value=""><span class="h5_dense txt-default" style="margin-left: 2px;">원</span>
+                  </div>
+                </div>
+                <div class="txt-caption info_caption txt-default04 ta-c b2_dense"><span><img src="../images/ico_info_xsm.png" alt=""></span>납입가능 금액 10만원 이상</div>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+        <div class="btn-box-fixed">
+          <div class="btn-box">
+            <button type="button" class="btn-lg btn-p h5">적용하기</button>
+            <!-- 기본 -->
+            <button type="button" class="btn-lg btn-p h5 on" style="display: none;">적용하기</button>
+            <!-- 선택 -->
+            <button type="button" class="btn-lg btn-p h5 disable" style="display: none;">적용하기</button>
+            <!-- 비활성화 -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- //content -->
+  </div>
+</body>
+</html>

@@ -1,0 +1,160 @@
+ <!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>우리금융저축은행</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0, width=device-width, viewport-fit=cover" />
+  <meta name="format-detection" content="telephone=no" />
+
+  <script type="text/javascript" src="../js/jquery-3.3.1.js"></script>
+  <script type="text/javascript" src="../js/jquery-ui.js"></script>
+  <script type="text/javascript" src="../js/swiper.min.js"></script>     
+  <script type="text/javascript" src="../js/common.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="../css/common.css">
+</head>
+<body>
+  <div id="wrap">
+    <!-- header -->
+    <header>
+      <button type="button" class="btn-close" onclick="history.back(-1);">취소</button>
+    </header>
+    <!-- //header -->
+
+    <!-- content --> 
+    <div class="content">
+      <div class="cont-box">
+        <div class="tit-box">
+          <h3>자동이체를 신청 하시겠어요?</h3>
+        </div>
+        <div class="agree-box">
+          <div class="tab-seg item2">
+            <ul>
+              <li data-tab="tab01" class="btn-tab on">
+                <button type="button" class="b2_dense">신청</button>
+              </li>
+              <li data-tab="tab02" class="btn-tab">
+                <button type="button" class="b2_dense">미신청</button>
+              </li>
+            </ul>
+          </div>
+          <div class="tab-con tab01 on">
+            <form action="#none" class="form-input">
+              <fieldset>
+                <legend>자동이체 폼그룹</legend>
+                <div class="inp-box type02">
+                  <div class="form-tit b2_dense">계좌선택</div>
+                  <div class="form-cont">
+                    <button type="button" class="ico_chev btn-sel btn-account_select" data-view="bank-box">
+                      <div class="list-tit h6 txt-default withdraw ico-bank050">저축은행</div>
+                      <div class="list-txt h6 account-num">10023456789</div>
+                    </button>
+                    <!-- 은행 선택창 -->
+                    <div class="bank-box toggle-box">
+                      <div class="toggle">
+                        <div class="tit-box">
+                          <strong class="h4">은행선택</strong>
+                          <button type="button" class="btn-close">닫기</button>
+                        </div>
+                        <div class="list-box">
+                          <ul>
+                            <li><button type="button" class="d1 ta-c ico-bank050">저축은행</button></li>
+                            <li><button type="button" class="d1 ta-c ico-bank020">우리은행</button></li>
+                            <li><button type="button" class="d1 ta-c ico-bank090">카카오뱅크</button></li>
+                            <li><button type="button" class="d1 ta-c ico-bank247">NH농협</button></li>
+                            <li><button type="button" class="d1 ta-c ico-bank035">신한</button></li>
+                            <li><button type="button" class="d1 ta-c ico-bank004">KB국민</button></li>
+                            <li><button type="button" class="d1 ta-c ico-bank003">IKB기업</button></li>
+                            <li><button type="button" class="d1 ta-c ico-bank081">하나</button></li>
+                            <li><button type="button" class="d1 ta-c ico-bank092">토스뱅크</button></li>
+                            <li><button type="button" class="d1 ta-c ico-bank045">새마을</button></li>
+                            <li><button type="button" class="d1 ta-c ico-bank032">부산</button></li>
+                            <li><button type="button" class="d1 ta-c ico-bank031">대구</button></li>
+                            <li><button type="button" class="d1 ta-c ico-bank089">케이뱅크</button></li>
+                            <li><button type="button" class="d1 ta-c ico-bank048">신협</button></li>
+                            <li><button type="button" class="d1 ta-c ico-bank071">우체국</button></li>
+                            <li><button type="button" class="d1 ta-c ico-bank023">SC제일</button></li>
+                            <li><button type="button" class="d1 ta-c ico-bank039">경남</button></li>
+                            <li><button type="button" class="d1 ta-c ico-bank007">수협</button></li>
+                            <li><button type="button" class="d1 ta-c ico-bank034">광주</button></li>
+                            <li><button type="button" class="d1 ta-c ico-bank088">제주</button></li>
+                            <li><button type="button" class="d1 ta-c ico-bank055">도이치</button></li>
+                            <li><button type="button" class="d1 ta-c ico-bank061">BNP 파리바</button></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- //은행 선택창-->
+                  </div>
+                </div>
+              </fieldset>
+            </form>
+            <div class="wran-box">
+              <div class="wran-tit-info b1">알아두세요</div>
+              <div class="wran-list">
+                <ul>
+                  <li class="b2">예금주 본인 계좌만 가능합니다.</li>
+                  <li class="b2">당행 자동이체 등록 시 공동인증서는 필요하지 않습니다.</li>
+                  <li class="b2">타행 자동이체 등록 시 본인명의 공동인증서가 필요하며 공동인증서는 PC 홈페이지(<a href="www.woorisavingsbank.com" target="_blank">www.woorisavingsbank.com</a>) 공동인증세터에서 앱으로 가져오기를 하셔야 합니다.</li>
+                </ul>
+              </div>
+            </div>
+            <form action="#none" class="form-input">
+              <fieldset>
+                <legend>이체날짜 폼그룹</legend>
+                <div class="inp-box type02">
+                  <div class="form-tit b2_dense">이체날짜</div>
+                  <div class="form-cont">
+                    <button type="button" class="ico_chev btn-sel btn-account_select" data-view="transfer-box">
+                      <div class="list-tit h6 txt-default">선택</div>
+                    </button>
+                    <!-- 이체날짜 선택창 -->
+                    <div class="transfer-box toggle-box">
+                      <div class="toggle">
+                        <div class="tit-box">
+                            <strong class="h4">매월 언제 저금할까요?</strong>
+                            <button type="button" class="btn-close">닫기</button>
+                        </div>
+                        <div class="list-box">
+                          <ul>
+                              <li><button type="button" class="h6 select">1일</button></li>
+                              <li><button type="button" class="h6">2일</button></li>
+                              <li><button type="button" class="h6">3일</button></li>
+                              <li><button type="button" class="h6">4일</button></li>
+                              <li><button type="button" class="h6">5일</button></li>
+                              <li><button type="button" class="h6">6일</button></li>
+                              <li><button type="button" class="h6">7일</button></li>
+                              <li><button type="button" class="h6">8일</button></li>
+                              <li><button type="button" class="h6">9일</button></li>
+                              <li><button type="button" class="h6">10일</button></li>
+                              <li><button type="button" class="h6">11일</button></li>
+                          </ul>
+                        </div>
+                    </div>
+                    </div>
+                    <!-- //이체날짜 선택창-->
+                  </div>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+          <div class="tab-con tab02">
+          </div>
+        </div>
+        <div class="btn-box-fixed">
+          <div class="btn-box">
+            <button type="button" class="btn-lg btn-p h5">적용하기</button>
+            <!-- 기본 -->
+            <button type="button" class="btn-lg btn-p h5 on" style="display: none;">적용하기</button>
+            <!-- 선택 -->
+            <button type="button" class="btn-lg btn-p h5 disable" style="display: none;">적용하기</button>
+            <!-- 비활성화 -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- //content -->
+  </div>
+</body>
+</html>

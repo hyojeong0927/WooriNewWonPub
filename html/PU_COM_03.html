@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>우리금융저축은행</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0, width=device-width, viewport-fit=cover" />
+  <meta name="format-detection" content="telephone=no" />
+
+  <script type="text/javascript" src="../js/jquery-3.3.1.js"></script>
+  <script type="text/javascript" src="../js/jquery-ui.js"></script>
+  <script type="text/javascript" src="../js/swiper.min.js"></script>     
+  <script type="text/javascript" src="../js/common.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="../css/common.css">   
+</head>
+<body>
+  <div id="wrap">
+    <!-- header -->
+    <header>
+      <strong>타행 본인 계좌 인증</strong>
+      <button type="button" class="btn-close" onclick="history.back(-1);">취소</button>
+    </header>
+    <!-- //header -->
+
+    <!-- content --> 
+    <div class="content">
+      <div class="cont-box">
+        <div class="tit-box">
+          <h3>계좌 인증을 진행할게요</h3>
+          <div class="tit-desc02 b1">입금하신 본인 계좌로 <span class="txt-primary">1원</span> 송금 인증이 진행됩니다.</div>
+          <div class="agree-box02">
+            <form action="#none" class="form-input">
+              <fieldset>
+                <legend>타행 본인 계좌 인증 내용 입력 폼그룹</legend>
+                <div class="inp-box">
+                  <div class="form-tit b2_dense">성명</div>
+                  <div class="form-cont">
+                    <input type="text" class="h5_dense" name="" id="inpName" placeholder="성명을 입력하세요" value="김우리">
+                  </div>
+                </div>
+                <div class="inp-box">
+                  <div class="form-tit b2_dense">은행</div>
+                  <div class="form-cont">
+                    <button type="button" class="btn-sel h5_dense btn-bank" data-view="bank-box">은행선택</button>
+                    <!-- 은행 선택창 -->
+                    <div class="bank-box toggle-box">
+                      <div class="toggle">
+                          <div class="tit-box">
+                              <strong class="h4">은행선택</strong>
+                              <button type="button" class="btn-close">닫기</button>
+                          </div>
+                          <div class="list-box">
+                            <ul>
+                                <li><button type="button" class="d1 ta-c ico-bank050">저축은행</button></li>
+                                <li><button type="button" class="d1 ta-c ico-bank020">우리은행</button></li>
+                                <li><button type="button" class="d1 ta-c ico-bank090">카카오뱅크</button></li>
+                                <li><button type="button" class="d1 ta-c ico-bank247">NH농협</button></li>
+                                <li><button type="button" class="d1 ta-c ico-bank035">신한</button></li>
+                                <li><button type="button" class="d1 ta-c ico-bank004">KB국민</button></li>
+                                <li><button type="button" class="d1 ta-c ico-bank003">IKB기업</button></li>
+                                <li><button type="button" class="d1 ta-c ico-bank081">하나</button></li>
+                                <li><button type="button" class="d1 ta-c ico-bank092">토스뱅크</button></li>
+                                <li><button type="button" class="d1 ta-c ico-bank045">새마을</button></li>
+                                <li><button type="button" class="d1 ta-c ico-bank032">부산</button></li>
+                                <li><button type="button" class="d1 ta-c ico-bank031">대구</button></li>
+                                <li><button type="button" class="d1 ta-c ico-bank089">케이뱅크</button></li>
+                                <li><button type="button" class="d1 ta-c ico-bank048">신협</button></li>
+                                <li><button type="button" class="d1 ta-c ico-bank071">우체국</button></li>
+                                <li><button type="button" class="d1 ta-c ico-bank023">SC제일</button></li>
+                                <li><button type="button" class="d1 ta-c ico-bank039">경남</button></li>
+                                <li><button type="button" class="d1 ta-c ico-bank007">수협</button></li>
+                                <li><button type="button" class="d1 ta-c ico-bank034">광주</button></li>
+                                <li><button type="button" class="d1 ta-c ico-bank088">제주</button></li>
+                                <li><button type="button" class="d1 ta-c ico-bank055">도이치</button></li>
+                                <li><button type="button" class="d1 ta-c ico-bank061">BNP 파리바</button></li>
+                            </ul>
+                          </div>
+                      </div>
+                    </div>
+                    <!-- //은행 선택창-->
+                  </div>
+                </div>
+                <div class="inp-box">
+                  <div class="form-tit b2_dense">입금 계좌번호</div>
+                  <div class="form-cont">
+                    <input type="text" class="h5_dense" name="" id="inpBank" placeholder="(-) 제외하고 입력" value="">
+                  </div>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+        <div class="btn-box-fixed"> 
+          <div class="btn-box">
+            <button type="button" class="btn-lg btn-p h5">모두 입력했어요</button>
+            <!-- 기본 -->
+            <button type="button" class="btn-lg btn-p on h5" style="display: none;">모두 입력했어요</button>
+            <!-- 선택 -->
+            <button type="button" class="btn-lg btn-p disable h5" style="display: none;">모두 입력했어요</button>
+            <!-- 비활성화 -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- //content -->
+  </div>
+</body>
+</html>
