@@ -1,0 +1,152 @@
+ <!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>우리금융저축은행</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0, width=device-width, viewport-fit=cover" />
+  <meta name="format-detection" content="telephone=no" />
+
+  <script type="text/javascript" src="../js/jquery-3.3.1.js"></script>
+  <script type="text/javascript" src="../js/jquery-ui.js"></script>
+  <script type="text/javascript" src="../js/swiper.min.js"></script>     
+  <script type="text/javascript" src="../js/common.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="../css/common.css">
+</head>
+<body>
+  <div id="wrap">
+    <!-- header -->
+    <header>
+      <button type="button" class="btn-close" onclick="history.back(-1);">취소</button>
+    </header>
+    <!-- //header -->
+
+    <!-- content --> 
+    <div class="content">
+      <div class="cont-box">
+        <div class="tit-step d2"><span class="d2">04</span> / 05</div>
+        <div class="tit-box">
+          <h3>한도조회를 위해<br>고객님의 정보 입력이 필요해요</h3>
+        </div>
+        <div class="agree-box">
+          <div class="tab-seg item2">
+            <ul>
+              <li data-tab="tab01" class="btn-tab on">
+                <button type="button" class="b2_dense">근로소득자</button>
+              </li>
+              <li data-tab="tab02" class="btn-tab">
+                <button type="button" class="b2_dense">자영업자/프리랜서</button>
+              </li>
+            </ul>
+          </div>
+          <div class="tab-con tab01 on">
+            <form action="#none" class="form-input">
+              <fieldset>
+                <legend>가입기간 개월수 선택 및 납입금액 입력 폼그룹</legend>
+                <div class="inp-box">
+                  <div class="form-tit b2_dense">직장명</div>
+                  <div class="form-cont">
+                    <input type="text" class="h5_dense" name="" id="inpCompany" placeholder="직장명을 입력하세요" value="">
+                  </div>
+                </div>
+                <div class="inp-box">
+                  <div class="form-tit b2_dense">입사일자</div>
+                  <div class="form-cont">
+                    <button type="button" class="btn-calendar" data-view="calendar-box">날짜선택</button><input type="text" class="inp-date h5_dense" name="" id="inpName" placeholder="0000.00.00">
+                  </div>
+                  <!-- 입사일 선택창 -->
+                  <div class="calendar-box toggle-box">
+                    <div class="toggle">
+                      <div class="tit-box">
+                        <strong class="h4">날짜 선택</strong>
+                        <button type="button" class="btn-close">닫기</button>
+                      </div>
+                      <div class="list-box">
+                        <div id="datepicker"></div>
+                      </div>
+                      <div class="btn-box">
+                        <button type="button" class="btn-close2 btn-lg btn-p h5">2024년 4월 6일 선택</button>
+                        <!-- 기본 -->
+                        <button type="button" class="btn-close2 btn-lg btn-p on h5" style="display: none;">2024년 4월 6일 선택</button>
+                        <!-- 선택 -->
+                        <button type="button" class="btn-close2 btn-lg btn-p disable h5" style="display: none;">2024년 4월 6일 선택</button>
+                        <!-- 비활성화 -->
+                      </div>
+                    </div>
+                  </div>
+                  <!-- //입사일 선택창-->
+                </div>
+                <div class="inp-box">
+                  <div class="form-tit b2_dense">연소득 금액</div>
+                  <div class="form-cont">
+                    <input type="text" class="h5_dense ta-r" name="" id="inpDeposit" placeholder="0,000" value=""><span class="h5_dense txt-default" style="margin-left: 2px;">만원</span>
+                  </div>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+          
+          <div class="tab-con tab02">
+            <form action="#none" class="form-input">
+              <fieldset>
+                <legend>가입기간 개월수 선택 및 납입금액 입력 폼그룹</legend>
+                <div class="inp-box">
+                  <div class="form-tit b2_dense">사업장장명</div>
+                  <div class="form-cont">
+                    <input type="text" class="h5_dense" name="" id="inpCompany" placeholder="사업장명을 입력하세요" value="">
+                  </div>
+                </div>
+                <div class="inp-box">
+                  <div class="form-tit b2_dense">영업개시일/입사일자</div>
+                  <div class="form-cont">
+                    <button type="button" class="btn-calendar" data-view="calendar-box">날짜선택</button><input type="text" class="inp-date h5_dense" name="" id="inpName" placeholder="0000.00.00">
+                  </div>
+                  <!-- 영업개시일/입사일 선택창 -->
+                  <div class="calendar-box toggle-box">
+                    <div class="toggle">
+                      <div class="tit-box">
+                        <strong class="h4">날짜 선택</strong>
+                        <button type="button" class="btn-close">닫기</button>
+                      </div>
+                      <div class="list-box">
+                        <div id="datepicker"></div>
+                      </div>
+                      <div class="btn-box">
+                        <button type="button" class="btn-close2 btn-lg btn-p h5">2024년 4월 6일 선택</button>
+                        <!-- 기본 -->
+                        <button type="button" class="btn-close2 btn-lg btn-p on h5" style="display: none;">2024년 4월 6일 선택</button>
+                        <!-- 선택 -->
+                        <button type="button" class="btn-close2 btn-lg btn-p disable h5" style="display: none;">2024년 4월 6일 선택</button>
+                        <!-- 비활성화 -->
+                      </div>
+                    </div>
+                  </div>
+                  <!-- //영업개시일/입사일 선택창-->
+                </div>
+                <div class="inp-box">
+                  <div class="form-tit b2_dense">사업소득액</div>
+                  <div class="form-cont">
+                    <input type="text" class="h5_dense ta-r" name="" id="inpDeposit" placeholder="0,000" value=""><span class="h5_dense txt-default" style="margin-left: 2px;">만원</span>
+                  </div>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+        <div class="btn-box-fixed">
+          <div class="btn-box">
+            <button type="button" class="btn-lg btn-p h5">모두 입력했어요</button>
+            <!-- 기본 -->
+            <button type="button" class="btn-lg btn-p h5 on" style="display: none;">모두 입력했어요</button>
+            <!-- 선택 -->
+            <button type="button" class="btn-lg btn-p h5 disable" style="display: none;">모두 입력했어요</button>
+            <!-- 비활성화 -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- //content -->
+  </div>
+</body>
+</html>

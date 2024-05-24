@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>우리금융저축은행</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0, width=device-width, viewport-fit=cover" />
+  <meta name="format-detection" content="telephone=no" />
+
+  <script type="text/javascript" src="../js/jquery-3.3.1.js"></script>
+  <script type="text/javascript" src="../js/jquery-ui.js"></script>
+  <script type="text/javascript" src="../js/swiper.min.js"></script>     
+  <script type="text/javascript" src="../js/common.js"></script>
+
+  <link rel="stylesheet" href="https://t1.daumcdn.net/postcode/cssjs/service/1695281975846/service.v2.min.css"> <!-- 카카오 주소검색창 임의 삽입 -->
+
+  <link rel="stylesheet" type="text/css" href="../css/common.css">
+</head>
+<body>
+  <div id="wrap">
+    <!-- header -->
+    <header>
+      <strong>주소검색</strong>
+      <button type="button" class="btn-close zip-sch" onclick="history.back(-1);">취소</button>
+    </header>
+    <!-- //header -->
+
+    <!-- content --> 
+    <div class="content">
+      <div class="cont-box">
+        <div class="tab-line item2">
+          <ul>
+            <li data-tab="tab01" class="btn-tab on">
+              <button type="button" class="h5_dense">통합검색</button>
+            </li>
+            <li data-tab="tab02" class="btn-tab">
+              <button type="button" class="h5_dense">지역검색</button>
+            </li>
+          </ul>
+        </div>
+        <div class="tab-con-box">
+          <div class="tab-con tab01 on">
+            <!-- 디자인 확인용 카카오 주소검색 창 임의 삽입 -->
+            <div class="daum_popup focus_input focus_content mapping_auto_road mapping_auto_jibun use_suggest" data-mode="transmit" data-intsh="false" data-ctx="" data-plrgno="" data-plrgtimer="" data-msi="10" data-whas="500" data-submitmode="on">
+              <div class="popup_post_type2">
+                <div class="popup_head">
+                  <h1 class="screen_out">우편번호 검색</h1>
+                  <form action="https://postcode.map.daum.net/search" id="searchForm" class="form_search" target="_self" method="GET">
+                    <fieldset class="fld_inside">
+                      <legend class="screen_out">우편번호 검색 입력폼</legend>
+                      <div class="post_search">
+                        <label for="region_name" class="screen_out">검색할 도로명/지번주소를 입력, 예시) 판교역로 166, 분당 주공, 백현동 532</label>
+                        <div class="wrap_tf_keyword">
+                            <input type="text" id="region_name" class="tf_keyword" name="region_name" value="" autocomplete="off" clearable="false">
+                        </div>
+                        <input type="hidden" name="cq" id="cQuery" value="">
+                        <input type="hidden" name="cpage" id="cPage" value="">
+                        <input type="hidden" name="origin" value="https://postcode.map.daum.net">
+                        <input type="hidden" name="isp" id="isP" value="">             <input type="hidden" name="isgr" id="isGR" value="">             <input type="hidden" name="isgj" id="isGJ" value="">             <input type="hidden" name="ongr" id="onGR" value="N">             <input type="hidden" name="ongj" id="onGJ" value="N">             <input type="hidden" name="regionid" id="regionId" value="">
+                        <input type="hidden" name="regionname" id="regionName" value="">
+                        <input type="hidden" name="roadcode" id="roadCode" value="">
+                        <input type="hidden" name="roadname" id="roadName" value="">
+                        <input type="hidden" name="banner" value="on">             <input type="hidden" name="ubl" value="on">             <input type="hidden" name="indaum" value="off">             <input type="hidden" name="vt" value="popup">             <input type="hidden" name="amr" value="on">             <input type="hidden" name="amj" value="on">             <input type="hidden" name="ani" value="off">             <input type="hidden" name="mode" value="transmit">             <input type="hidden" name="sd" value="on">             <input type="hidden" name="fi" value="on">             <input type="hidden" name="fc" value="on">             <input type="hidden" name="hmb" value="off">             <input type="hidden" name="heb" value="off">             <input type="hidden" name="asea" value="off">             <input type="hidden" name="smh" value="off">             <input type="hidden" name="zo" value="on">             <input type="hidden" name="theme" value="">
+                        <input type="hidden" name="bit" value="">
+                        <input type="hidden" name="sit" value="">
+                        <input type="hidden" name="sgit" value="">
+                        <input type="hidden" name="sbit" value="">
+                        <input type="hidden" name="pit" value="">
+                        <input type="hidden" name="mit" value="">
+                        <input type="hidden" name="lcit" value="">
+                        <input type="hidden" name="plrg" value="">             <input type="hidden" name="plrgt" value="1.5">             <input type="hidden" name="us" value="on">             <input type="hidden" name="msi" value="10">             <input type="hidden" name="ahs" value="off">             <input type="hidden" name="whas" value="500">             <input type="hidden" name="zn" value="Y">
+                        <input type="hidden" name="sm" value="on">             <input type="hidden" name="CWinWidth" id="constWindowWidth" value="500">
+                        <input type="hidden" name="sptype" id="spType" value="">             <input type="hidden" name="sporgq" id="spOrgQuery" value="">             <input type="hidden" name="fullpath" id="fullPath" value="/guide">
+                        <input type="hidden" name="a51" id="a51" value="off">             <button type="button" class="btn_clear" style="display: none;"><span class="img_post">취소</span></button>
+                        <button type="button" class="btn_search"><span class="img_post">검색</span></button>
+                        <span class="placeholder show">예) 판교역로 166, 분당 주공, 백현동 532</span>         </div>
+                    </fieldset>
+                  </form>
+                  <div id="postCodeSuggestLayer" class="suggest_search">
+                    <div class="suggestBox box_sub" style="display: none;">
+                      <div class="baseBox bg"></div>
+                    </div>
+                  </div>
+                  <label for="focusContent" class="screen_out">의 검색 결과 입니다. 아래쪽으로 스크롤하세요.</label>
+                  <input type="button" class="focus_content_style" id="focusContent">
+                </div>
+                <div class="popup_body">
+                  <div class="info_body">
+                    <h2 class="tit_tip">tip</h2>
+                    <p class="desc_tip">아래와 같은 조합으로 검색을 하시면 더욱 정확한 결과가 검색됩니다.</p>
+                    <p class="desc_tip">도로명 + 건물번호</p>
+                    <span class="txt_example">예) 판교역로 166,&nbsp;&nbsp;제주 첨단로 242</span>
+                    <p class="desc_tip2">지역명(동/리) + 번지</p>
+                    <span class="txt_example">예) 백현동 532,&nbsp;&nbsp;제주 영평동 2181</span>
+                    <p class="desc_tip2">지역명(동/리) + 건물명(아파트명)</p>
+                    <span class="txt_example">예) 분당 주공,&nbsp;&nbsp;연수동 주공3차</span>
+                    <p class="desc_tip2">사서함명 + 번호</p>
+                    <span class="txt_example">예) 분당우체국사서함 1~100</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- //디자인 확인용 카카오 주소검색 창 임의 삽입 -->
+          </div>
+          <div class="tab-con tab02">
+            <div class="agree-box type02">
+              <form action="#none" class="form-input">
+                <fieldset>
+                  <legend>지역선택 폼그룹</legend>
+                  <div class="inp-box">
+                    <div class="form-tit b2_dense">지역선택</div>
+                    <div class="form-cont">
+                      <button type="button" class="btn-sel btn-job h5_dense" data-view="local-box">전체</button>
+                      <!-- 지역선택창 -->
+                      <div class="local-box toggle-box">
+                        <div class="toggle">
+                            <div class="tit-box">
+                                <strong class="h4">지역을 선택하세요</strong>
+                                <button type="button" class="btn-close">닫기</button>
+                            </div>
+                            <div class="list-box">
+                              <div class="custom-rdo type05">
+                                <div class="custom-rdo-item">
+                                  <input type="radio" id="custom-item01_1" name="rdo01" checked="">
+                                  <label for="custom-item01_1" class="inp-rdo">
+                                    <span class="b2 txt-default">전체</span>
+                                  </label>  
+                                </div>
+                                <div class="custom-rdo-item">
+                                  <input type="radio" id="custom-item01_2" name="rdo01">
+                                  <label for="custom-item01_2" class="inp-rdo">
+                                    <span class="b2 txt-default">서울</span>
+                                  </label>
+                                </div>
+                                <div class="custom-rdo-item">
+                                  <input type="radio" id="custom-item01_3" name="rdo01">
+                                  <label for="custom-item01_3" class="inp-rdo">
+                                    <span class="b2 txt-default">부산</span>
+                                  </label>
+                                </div>
+                                <div class="custom-rdo-item">
+                                  <input type="radio" id="custom-item01_4" name="rdo01">
+                                  <label for="custom-item01_4" class="inp-rdo">
+                                    <span class="b2 txt-default">대구</span>
+                                  </label>
+                                </div>
+                                <div class="custom-rdo-item">
+                                  <input type="radio" id="custom-item01_5" name="rdo01">
+                                  <label for="custom-item01_5" class="inp-rdo">
+                                    <span class="b2 txt-default">인천</span>
+                                  </label>
+                                </div>
+                                <div class="custom-rdo-item">
+                                  <input type="radio" id="custom-item01_6" name="rdo01">
+                                  <label for="custom-item01_6" class="inp-rdo">
+                                    <span class="b2 txt-default">광주</span>
+                                  </label>
+                                </div>
+                                <div class="custom-rdo-item">
+                                  <input type="radio" id="custom-item01_7" name="rdo01">
+                                  <label for="custom-item01_7" class="inp-rdo">
+                                    <span class="b2 txt-default">대전</span>
+                                  </label>
+                                </div>
+                                <div class="custom-rdo-item">
+                                  <input type="radio" id="custom-item01_8" name="rdo01">
+                                  <label for="custom-item01_8" class="inp-rdo">
+                                    <span class="b2 txt-default">울산</span>
+                                  </label>
+                                </div>
+                                <div class="custom-rdo-item">
+                                  <input type="radio" id="custom-item01_9" name="rdo01">
+                                  <label for="custom-item01_9" class="inp-rdo">
+                                    <span class="b2 txt-default">경기</span>
+                                  </label>
+                                </div>
+                                <div class="custom-rdo-item">
+                                  <input type="radio" id="custom-item01_10" name="rdo01">
+                                  <label for="custom-item01_10" class="inp-rdo">
+                                    <span class="b2 txt-default">강원</span>
+                                  </label>
+                                </div>
+                                <div class="custom-rdo-item">
+                                  <input type="radio" id="custom-item01_11" name="rdo01">
+                                  <label for="custom-item01_11" class="inp-rdo">
+                                    <span class="b2 txt-default">충북</span>
+                                  </label>
+                                </div>
+                                <div class="custom-rdo-item">
+                                  <input type="radio" id="custom-item01_12" name="rdo01">
+                                  <label for="custom-item01_12" class="inp-rdo">
+                                    <span class="b2 txt-default">충남</span>
+                                  </label>
+                                </div>
+                                <div class="custom-rdo-item">
+                                  <input type="radio" id="custom-item01_13" name="rdo01">
+                                  <label for="custom-item01_13" class="inp-rdo">
+                                    <span class="b2 txt-default">전북</span>
+                                  </label>
+                                </div>
+                                <div class="custom-rdo-item">
+                                  <input type="radio" id="custom-item01_14" name="rdo01">
+                                  <label for="custom-item01_14" class="inp-rdo">
+                                    <span class="b2 txt-default">전남</span>
+                                  </label>
+                                </div>
+                                <div class="custom-rdo-item">
+                                  <input type="radio" id="custom-item01_15" name="rdo01">
+                                  <label for="custom-item01_15" class="inp-rdo">
+                                    <span class="b2 txt-default">세종</span>
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                      </div>
+                      <!-- //지역선택창-->
+                    </div>
+                  </div>
+                </fieldset>
+              </form>
+            </div>
+            
+            <div class="job-sch-box">
+              <div class="sch-box">
+                <div class="sch-box02">
+                  <button type="button" class="btn-search">검색</button><input type="text" class="inp-sch h5_dense" name="" id="inpName" placeholder="검색어 입력">
+                </div>
+              </div>
+            </div>
+            <div class="addr-local-box">
+              <div class="sch-txt">
+                <div class="b1">아래의 직군을 선택하거나, 직종을 검색하세요.</div>
+                <ul class="list-type01">
+                  <li class="b2 txt-default03">도로명 + 건물번호 <span class="txt-primary">(예:소공로 51)</span></li>
+                  <li class="b2 txt-default03">지역명 + 번지 <span class="txt-primary">(예:회현동2가 10-1)</span></li>
+                  <li class="b2 txt-default03">건물명(아파트명) <span class="txt-primary">(예:우리금융디지털타워)</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- //content -->
+    <!-- 상세주소 입력창 -->
+    <div class="call-box toggle-box">
+      <div class="toggle">
+        <div class="tit-box">
+            <strong class="h4">상세주소를 입력해주세요</strong>
+            <button type="button" class="btn-close">닫기</button>
+        </div>
+        <div class="addr-box">
+          <h6>[04632]<br>서울특별시 중구 소공로 51 (주)우리은행본점</h6>
+          <div class="b2 txt-default04">서울특별시 중구 회현동1가 203 (주)우리은행본점</div>
+        </div>
+        <div class="addr-detail-box">
+          <div class="inp-box type02">
+            <div class="form-tit b2_dense">상세주소</div>
+            <div class="form-cont">
+              <input type="text" class="h5_dense" name="" id="inpAddr_detail" placeholder="검색어 입력" value="">
+            </div>
+          </div>
+          <div class="txt-caption info_caption txt-default04 ta-l b2_dense"><span><img src="../images/ico_info_xsm.png" alt=""></span>가입기간 : 6개월 ~ 36개월</div>
+        </div>
+        <div class="btn-box-fixed">
+          <div class="btn-box">
+            <button type="button" class="btn-lg btn-p h5">확인</button>
+            <!-- 기본 -->
+            <button type="button" class="btn-lg btn-p h5 on" style="display: none;">확인</button>
+            <!-- 선택 -->
+            <button type="button" class="btn-lg btn-p h5 disable" style="display: none;">확인</button>
+            <!-- 비활성화 -->
+          </div>
+      </div>
+    </div>
+    <!-- //상세주소 입력창-->
+  </div>
+</body>
+</html>
+

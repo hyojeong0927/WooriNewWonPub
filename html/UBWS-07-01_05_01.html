@@ -1,0 +1,107 @@
+ <!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>우리금융저축은행</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0, width=device-width, viewport-fit=cover" />
+  <meta name="format-detection" content="telephone=no" />
+
+  <script type="text/javascript" src="../js/jquery-3.3.1.js"></script>
+  <script type="text/javascript" src="../js/jquery-ui.js"></script>
+  <script type="text/javascript" src="../js/swiper.min.js"></script>     
+  <script type="text/javascript" src="../js/common.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="../css/common.css">   
+</head>
+<body>
+  <div id="wrap">
+    <!-- header -->
+    <header>
+      <button type="button" class="btn-back" onclick="history.back(-1);">뒤로가기</button>
+      <strong></strong>
+    </header>
+    <!-- //header -->
+
+    <!-- content --> 
+    <div class="content">
+      <div class="cont-box">
+        <div class="agree-box">
+          <form action="#none" class="form-input">
+            <fieldset>
+              <legend>입출금 계좌 입력 폼그룹</legend>
+              <div class="inp-box type04">
+                <button type="button" class="btn-sel h5_dense" data-view="bank-box">
+                  <div class="btn-bank_account02">
+                    <div class="ico_bank ico-bank020"></div>
+                    <div class="info_bank ta-l">
+                      <div class="recent-tit h5">우리은행 계좌<span class="h5">에서</span></div>
+                    </div>
+                  </div>
+                </button>
+                <div class="inp-bank">
+                  <div class="b2 txt-default04">생활비 통장 1002-035-640567</div>
+                </div>
+              </div>
+              <div class="inp-box type04 last">
+                <button type="button" class="btn-sel h5_dense" data-view="bank-box">
+                  <div class="btn-bank_account02">
+                    <div class="ico_bank ico-bank090"></div>
+                    <div class="info_bank ta-l">
+                      <div class="recent-tit h5">김우리님 계좌<span class="h5">로</span></div>
+                    </div>
+                  </div>
+                </button>
+                <div class="inp-bank">
+                  <div class="b2 txt-default04">카카오 110123456789</div>
+                </div>
+                <div class="txt-caption03 txt-critical b2"><span class="ico-error"></span>최근 이체한 내역이 없는 계좌입니다.</div>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+        <div class="transfer-box last">
+          <div class="inp-line">
+            <input type="text" name="" id="" class="inp-acccount no-line h2" placeholder="얼마를 이체할까요?" value="200,000원">
+          </div>
+          <div class="txt-caption03 txt-default03 b2">20만원</div>
+        </div>
+        <div class="btn-box-fixed">
+          <div class="btn-box kp-wrap02">
+            <div class="btn-add_admount">
+              <button type="button" class="btn-xsm btn-t b2">+100만</button>
+              <button type="button" class="btn-xsm btn-t b2">+10만</button>
+              <button type="button" class="btn-xsm btn-t b2">+5만</button>
+              <button type="button" class="btn-xsm btn-t b2">+1만</button>
+              <button type="button" class="btn-xsm btn-p b2">전액</button>
+            </div>
+            <div class="keypad">
+              <button type="button" value="1" class="h2">1</button>
+              <button type="button" value="2" class="h2">2</button>
+              <button type="button" value="3" class="h2">3</button>
+              <button type="button" value="4" class="h2">4</button>
+              <button type="button" value="5" class="h2">5</button>
+              <button type="button" value="6" class="h2">6</button>
+              <button type="button" value="7" class="h2">7</button>
+              <button type="button" value="8" class="h2">8</button>
+              <button type="button" value="9" class="h2">9</button>
+              <button type="button" value="00" class="h2">00</button>
+              <button type="button" value="0" class="h2">0</button>
+              <button type="button" value="13" class="btn del">전체삭제</button>
+            </div>
+          </div>
+          <div class="btn-box">
+            <button type="button" class="btn-lg btn-p h5">확인</button>
+            <!-- 기본 -->
+            <button type="button" class="btn-lg btn-p h5 on" style="display: none;">확인</button>
+            <!-- 선택 -->
+            <button type="button" class="btn-lg btn-p h5 disable" style="display: none;">확인</button>
+            <!-- 비활성화 -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- //content -->
+  </div>
+</body>
+</html>

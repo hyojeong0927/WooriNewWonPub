@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>우리금융저축은행</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0, width=device-width, viewport-fit=cover" />
+  <meta name="format-detection" content="telephone=no" />
+
+  <script type="text/javascript" src="../js/jquery-3.3.1.js"></script>
+  <script type="text/javascript" src="../js/jquery-ui.js"></script>
+  <script type="text/javascript" src="../js/swiper.min.js"></script>     
+  <script type="text/javascript" src="../js/common.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="../css/common.css">   
+</head>
+<body>
+  <div id="wrap">
+    <!-- header -->
+    <header>
+      <button type="button" class="btn-back" onclick="history.back(-1);">뒤로가기</button>
+      <strong>비타WON신용대출</strong>
+      <button type="button" class="btn-close_txt" onclick="history.back(-1);">취소</button>
+    </header>
+    <!-- //header -->
+
+    <!-- content --> 
+    <div class="content">
+      <div class="cont-box">
+        <div class="tit-box">
+          <h3>자동이체(CMS)에 동의 해주세요</h3>
+        </div>
+      </div>
+      <div class="data-box type02">
+        <div class="list-box bg">
+          <table>
+            <colgroup>
+              <col style="width: 35%;">
+              <col style="width: 65%;">
+            </colgroup>
+            <tbody>
+              <tr>
+                <th class="th-row02 ta-l b1">예금주</th>
+                <td class="td-row02 ta-r b1">김우리</td>
+              </tr>
+              <tr>
+                <th class="th-row02 ta-l b1">출금은행</th>
+                <td class="td-row02 ta-r b1">우리은행</td>
+              </tr>
+              <tr>
+                <th class="th-row02 ta-l b1">출금계좌번호</th>
+                <td class="td-row02 ta-r b1">1002-1234-5678</td>
+              </tr>
+              <tr>
+                <th class="th-row02 ta-l b1">출금일자</th>
+                <td class="td-row02 ta-r b1">05일</td>
+              </tr>
+              <tr>
+                <th class="th-row02 ta-l b1">예금주와의 관계</th>
+                <td class="td-row02 ta-r b1">본인</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="data-box type02">
+        <div class="list-box bg">
+          <h6>[필수] 개인정보 수집 및 이용동의</h6>
+          <ul class="list-type04">
+            <li class="b2 txt-default03">수집 및 이용목적 : CMS 출금이체를 통한 요금수납</li>
+            <li class="b2 txt-default03">수집항목 : 성명, 전화번호, 휴대폰번호, 금융기관명, 계좌번호</li>
+            <li class="b2 txt-default03">보유 및 이용기간 : 수집, 이용 동의일로부터 CMS 출금이체 종료일(해지일) 후 5년까지</li>
+            <li class="b2 txt-default03">신청서는 개인정보 수집 및 이용을 거부할 권리가 있으며, 권리행사 시 출금이체 신청이 거부될 수 있습니다.</li>
+          </ul>
+          <div class="custom-rdo type-btn ml-0">
+            <div class="custom-rdo-item">
+              <input type="radio" id="custom-item01_1" name="rdo01" checked="">
+              <label for="custom-item01_1" class="inp-rdo">
+                <span class="b2 txt-default">신청</span>
+              </label>  
+            </div>
+            <div class="custom-rdo-item">
+              <input type="radio" id="custom-item01_2" name="rdo01">
+              <label for="custom-item01_2" class="inp-rdo">
+                <span class="b2 txt-default">신청하지 않음</span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="data-box type02">
+        <div class="list-box bg">
+          <h6>[필수] 개인정보 제 3자 제공 동의</h6>
+          <ul class="list-type04">
+            <li class="b2 txt-default03">개인정보를 제공받는 자 : 사단법인 금융결제원</li>
+            <li class="b2 txt-default03">개인정보를 제공받는 자의 개인정보 이용 목적 : CMS</li>
+          </ul>
+          <div class="custom-rdo type-btn ml-0">
+            <div class="custom-rdo-item">
+              <input type="radio" id="custom-item02_1" name="rdo02" checked="">
+              <label for="custom-item02_1" class="inp-rdo">
+                <span class="b2 txt-default">신청</span>
+              </label>  
+            </div>
+            <div class="custom-rdo-item">
+              <input type="radio" id="custom-item02_2" name="rdo02">
+              <label for="custom-item02_2" class="inp-rdo">
+                <span class="b2 txt-default">신청하지 않음</span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="btn-box-fixed">
+        <div class="btn-box">
+          <button type="button" class="btn-lg btn-p h5">확인</button>
+          <!-- 기본 -->
+          <button type="button" class="btn-lg btn-p on h5" style="display: none;">확인</button>
+          <!-- 선택 -->
+          <button type="button" class="btn-lg btn-p disable h5" style="display: none;">확인</button>
+          <!-- 비활성화 -->
+        </div>
+      </div>
+    </div>
+    <!-- //content -->
+  </div>
+</body>
+</html>

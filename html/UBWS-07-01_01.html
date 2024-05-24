@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>우리금융저축은행</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0, width=device-width, viewport-fit=cover" />
+  <meta name="format-detection" content="telephone=no" />
+
+  <script type="text/javascript" src="../js/jquery-3.3.1.js"></script>
+  <script type="text/javascript" src="../js/jquery-ui.js"></script>
+  <script type="text/javascript" src="../js/swiper.min.js"></script>     
+  <script type="text/javascript" src="../js/common.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="../css/common.css">   
+</head>
+<body>
+  <div id="wrap">
+    <!-- header -->
+    <header>
+      <strong>이체하기</strong>
+      <button type="button" class="btn-close_txt" onclick="history.back(-1);">취소</button>
+    </header>
+    <!-- //header -->
+
+    <!-- content --> 
+    <div class="content">
+      <div class="cont-box">
+        <div class="card-box">
+          <div class="card-balance">
+            <ul>
+              <li>
+                <div class="balance-tit">
+                  <div class="balance-bank ico-bank020"></div>
+                  <div class="balance-account">
+                    <h6>첫번째 저축예금</h6>
+                    <div class="b2 txt-default04">저축은행 1002-233-123489</div>
+                  </div>
+                  <div class="balance-btn">
+                    <button type="button" class="btn-more01">옵션</button>
+                  </div>
+                </div>
+                <div class="balance-txt ta-r">
+                  <span class="b2 txt-default03">출금가능금액</span>
+                  <span class="balance-num h4">1,000,000원</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="tit-box">
+          <h3 class="mt-15">어디로 이체하시겠어요?</h3>
+        </div>
+        <div class="transfer-box">
+          <div class="inp-line">
+            <input type="text" class="inp-acccount h3" name="" id="inpName" placeholder="계좌번호 입력">
+          </div>
+          <div class="tab-seg item3">
+            <ul>
+              <li data-tab="tab01" class="btn-tab">
+                <button type="button" class="b2_dense">추천</button>
+              </li>
+              <li data-tab="tab02" class="btn-tab on">
+                <button type="button" class="b2_dense">자주</button>
+              </li>
+              <li data-tab="tab03" class="btn-tab">
+                <button type="button" class="b2_dense">내계좌</button>
+              </li>
+            </ul>
+          </div>
+          <div class="tab-con tab01">
+            <div class="transfer-list">
+              <div class="tf-list-tit">
+                <h5>최근사용 계좌</h5>
+                <button type="button" class="btn-edit_txt btn-xsm txt-default03">편집</button>
+              </div>
+              <ul>
+                <li>
+                  <button type="button" class="btn-bank_account select">
+                    <div class="ico_bank ico-bank020"></div>
+                    <div class="info_bank ta-l">
+                      <div class="recent-tit">
+                        <span class="h6 txt-default">박우리</span>
+                        <span class="b2 txt-default04">2024.01.28</span>
+                      </div>
+                      <div class="recent-accountNo b2 txt-default04">우리 100-122343-12-456</div>
+                    </div>
+                  </button>
+                  <button type="button" class="btn-star on">즐겨찾기</button>
+                </li>
+                <li>
+                  <button type="button" class="btn-bank_account select">
+                    <div class="ico_bank ico-bank090"></div>
+                    <div class="info_bank ta-l">
+                      <div class="recent-tit">
+                        <span class="h6 txt-default">카우리</span>
+                        <span class="b2 txt-default04">2023.12.27</span>
+                      </div>
+                      <div class="recent-accountNo b2 txt-default04">카카오 111-115926-01-222</div>
+                    </div>
+                  </button>
+                  <button type="button" class="btn-star">즐겨찾기</button>
+                </li>
+                <li>
+                  <button type="button" class="btn-bank_account select">
+                    <div class="ico_bank ico-bank020"></div>
+                    <div class="info_bank ta-l">
+                      <div class="recent-tit">
+                        <span class="h6 txt-default">김우리</span>
+                        <span class="b2 txt-default04">2024.01.14</span>
+                      </div>
+                      <div class="recent-accountNo b2 txt-default04">우리 100-122343-12-456</div>
+                    </div>
+                  </button>
+                  <button type="button" class="btn-star">즐겨찾기</button>
+                </li>
+                <li>
+                  <button type="button" class="btn-bank_account select">
+                    <div class="ico_bank ico-bank092"></div>
+                    <div class="info_bank ta-l">
+                      <div class="recent-tit">
+                        <span class="h6 txt-default">황우리</span>
+                        <span class="b2 txt-default04">2024.01.11</span>
+                      </div>
+                      <div class="recent-accountNo b2 txt-default04">토스 100-122343-12-456</div>
+                    </div>
+                  </button>
+                  <button type="button" class="btn-star">즐겨찾기</button>
+                </li>
+                <li>
+                  <button type="button" class="btn-bank_account select">
+                    <div class="ico_bank ico-bank020"></div>
+                    <div class="info_bank ta-l">
+                      <div class="recent-tit">
+                        <span class="h6 txt-default">최우리</span>
+                        <span class="b2 txt-default04">2024.01.05</span>
+                      </div>
+                      <div class="recent-accountNo b2 txt-default04">우리 100-122343-12-456</div>
+                    </div>
+                  </button>
+                  <button type="button" class="btn-star">즐겨찾기</button>
+                </li>
+              </ul>
+              <div class="sch-more02">
+                <button type="button"><span class="b2 txt-default03">더보기</span></button>
+              </div>
+              
+              <!-- Toast 메세지 -->
+              <div class="toast-msg success">
+                <div class="ico-success b1">자주이체 계좌로 등록했어요</div>
+              </div>
+              <!-- //Toast 메세지 -->
+              <!-- Toast 메세지 -->
+              <div class="toast-msg cancel">
+                <div class="ico-success b1">자주이체 계좌에서 해제됐어요</div>
+              </div>
+              <!-- //Toast 메세지 -->
+            </div>  
+          </div>
+          <div class="tab-con tab02 on">
+            <div class="transfer-list">
+              <div class="tf-list-tit">
+                <h5></h5>
+                <button type="button" class="btn-edit_txt btn-xsm txt-default03">편집</button>
+              </div>
+              <ul>
+                <li>
+                  <button type="button" class="btn-bank_account select">
+                    <div class="ico_bank ico-bank020"></div>
+                    <div class="info_bank ta-l">
+                      <div class="favacc-tit">
+                        <span class="h6 txt-default">우리은행</span>
+                        <span class="b2 txt-default04">100-122343-12-456</span>
+                      </div>
+                      <div class="favacc-txt">
+                        <span class="b2 txt-default04">김철수</span>
+                        <span class="b2 txt-default04">월세납부</span>
+                      </div>
+                    </div>
+                  </button>
+                </li>
+                <li>
+                  <button type="button" class="btn-bank_account select">
+                    <div class="ico_bank ico-bank090"></div>
+                    <div class="info_bank ta-l">
+                      <div class="favacc-tit">
+                        <span class="h6 txt-default">카카오</span>
+                        <span class="b2 txt-default04">333-123456-789</span>
+                      </div>
+                      <div class="favacc-txt">
+                        <span class="b2 txt-default04">이명희</span>
+                        <span class="b2 txt-default04">수학학원비</span>
+                      </div>
+                    </div>
+                  </button>
+                </li>
+                <li>
+                  <button type="button" class="btn-bank_account select">
+                    <div class="ico_bank ico-bank020"></div>
+                    <div class="info_bank ta-l">
+                      <div class="favacc-tit">
+                        <span class="h6 txt-default">우리은행</span>
+                        <span class="b2 txt-default04">100-122343-12-456</span>
+                      </div>
+                      <div class="favacc-txt">
+                        <span class="b2 txt-default04">김철수</span>
+                        <span class="b2 txt-default04">월세 납부</span>
+                      </div>
+                    </div>
+                  </button>
+                </li>
+              </ul>
+              <div class="sch-more02">
+                <button type="button"><span class="b2 txt-default03">더보기</span></button>
+              </div>
+            </div>  
+          </div>
+          <div class="tab-con tab03">
+            <div class="transfer-list">
+              <ul>
+                <li>
+                  <button type="button" class="btn-bank_account select">
+                    <div class="ico_bank ico-bank020"></div>
+                    <div class="info_bank ta-l">
+                      <div class="recent-tit">
+                        <span class="h6 txt-default">우리SUPER주거래통장</span>
+                      </div>
+                      <div class="recent-accountNo b2 txt-default04">우리 100-122343-12-456</div>
+                    </div>
+                  </button>
+                </li>
+                <li>
+                  <button type="button" class="btn-bank_account select">
+                    <div class="ico_bank ico-bank020"></div>
+                    <div class="info_bank ta-l">
+                      <div class="recent-tit">
+                        <span class="h6 txt-default">모임통장</span>
+                      </div>
+                      <div class="recent-accountNo b2 txt-default04">우리 100-122343-12-456</div>
+                    </div>
+                  </button>
+                </li>
+                <li>
+                  <button type="button" class="btn-bank_account select">
+                    <div class="ico_bank ico-bank020"></div>
+                    <div class="info_bank ta-l">
+                      <div class="recent-tit">
+                        <span class="h6 txt-default">급여통장</span>
+                      </div>
+                      <div class="recent-accountNo b2 txt-default04">우리 100-122343-12-456</div>
+                    </div>
+                  </button>
+                </li>
+              </ul>
+              <div class="sch-more02">
+                <button type="button"><span class="b2 txt-default03">더보기</span></button>
+              </div>
+            </div>  
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- //content -->
+  </div>
+</body>
+</html>

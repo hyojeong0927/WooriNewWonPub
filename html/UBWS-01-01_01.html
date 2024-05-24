@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>우리금융저축은행</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0, width=device-width, viewport-fit=cover" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <script type="text/javascript" src="../js/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="../js/jquery-ui.js"></script>
+    <script type="text/javascript" src="../js/swiper.min.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+  </head>
+  <body>
+    <div id="wrap">
+      <!-- header -->
+      <header>
+        <button type="button" class="btn-back" onclick="history.back(-1);">뒤로가기</button>
+        <strong>우리WON저축은행 가입</strong>
+        <button type="button" class="btn-close" onclick="history.back(-1);">취소</button>
+      </header>
+      <!-- //header -->
+
+      <!-- content -->
+      <div class="content">
+        <div class="cont-box">
+          <div class="tit-box">
+            <h3>회원가입을 위해<br />약관에 동의해 주세요</h3>
+          </div>
+          <div class="agree-box">
+            <div class="term-box">
+              <div class="chk-all-box">
+                <input type="checkbox" id="chkAll01" /><label for="chkAll01"><span class="h6">필수 약관 모두 체크하기</span></label
+                ><button type="button" class="agree-open on">약관목록보기</button>
+              </div>
+              <div class="chk-list-box" style="display: block">
+                <ul>
+                  <li>
+                    <div class="inp-chk">
+                      <input type="checkbox" name="" id="chk01_1" checked /><label for="chk01_1"><span class="b1">[필수] 전자금융거래 기본약관</span></label>
+                    </div>
+                    <button type="button" class="agree-view">약관보기</button>
+                  </li>
+                  <li>
+                    <div class="inp-chk">
+                      <input type="checkbox" name="" id="chk01_2" /><label for="chk01_2"><span class="b1">[필수] 전자금융서비스 기본약관</span></label>
+                    </div>
+                    <button type="button" class="agree-view">약관보기</button>
+                  </li>
+                  <li>
+                    <div class="inp-chk">
+                      <input type="checkbox" name="" id="chk01_3" /><label for="chk01_3"><span class="b1">[필수] 모바일앱서비스 기본약관</span></label>
+                    </div>
+                    <button type="button" class="agree-view">약관보기</button>
+                  </li>
+                  <li>
+                    <div class="inp-chk">
+                      <input type="checkbox" name="" id="chk01_4" /><label for="chk01_4"><span class="b1">[필수] 멤버십서비스 기본약관</span></label>
+                    </div>
+                    <button type="button" class="agree-view">약관보기</button>
+                  </li>
+                  <li>
+                    <div class="inp-chk">
+                      <input type="checkbox" name="" id="chk01_5" /><label for="chk01_5"
+                        ><span class="b1">[필수] 개인(신용)정보 수집·이용 동의서(회원가입)</span></label
+                      >
+                    </div>
+                    <button type="button" class="agree-view">약관보기</button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="term-box">
+              <div class="chk-all-box">
+                <input type="checkbox" id="chkAll02" /><label for="chkAll02"><span class="h6">선택 약관 모두 체크하기</span></label
+                ><button type="button" class="agree-open02">약관목록보기</button>
+              </div>
+              <div class="chk-list-box02">
+                <ul>
+                  <li>
+                    <div class="inp-chk">
+                      <input type="checkbox" name="" id="chk01_2" /><label for="chk01_2"
+                        ><span class="b1">[선택] 개인[신용]정보 수집·이용 제공 동의서 [멤버십서비스] </span></label
+                      >
+                    </div>
+                    <button type="button" class="agree-view">약관보기</button>
+                    <div class="custom-rdo type-btn">
+                      <div class="custom-rdo-item">
+                        <input type="radio" id="custom-item01_1" name="rdo00" checked />
+                        <label for="custom-item01_1" class="inp-rdo">
+                          <span class="b2 txt-default">PUSH</span>
+                        </label>
+                      </div>
+                      <div class="custom-rdo-item">
+                        <input type="radio" id="custom-item01_2" name="rdo00" />
+                        <label for="custom-item01_2" class="inp-rdo">
+                          <span class="b2 txt-default">문자</span>
+                        </label>
+                      </div>
+                      <div class="custom-rdo-item">
+                        <input type="radio" id="custom-item01_2" name="rdo00" />
+                        <label for="custom-item01_2" class="inp-rdo">
+                          <span class="b2 txt-default">전화</span>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- // agree-box-->
+
+          <div class="verify-box">
+            <ul class="list-type03">
+              <li class="b1 txt-default02">마케팅 수신 동의 시 우대금리를 제공하는 상품에 가입중인 고겍분들은 반드시 선택 동의에 체크해 주세요.</li>
+              <li class="b1 txt-default02">선택동의 사항을 변경하고자 하실 경우 전체메뉴>설정>마케팅 정보 수진 동의에서 변경 가능합니다.</li>
+            </ul>
+          </div>
+
+          <div class="btn-box-fixed">
+            <div class="btn-box">
+              <button type="button" class="btn-lg btn-p h5" style="display: none">선택한 약관을 모두 확인했어요</button>
+              <!-- 기본 -->
+              <button type="button" class="btn-lg btn-p on h5" style="display: none">선택한 약관을 모두 확인했어요</button>
+              <!-- 선택 -->
+              <button type="button" class="btn-lg btn-p disable h5">약관을 모두 확인했어요</button>
+              <!-- 비활성화 -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- //content -->
+    </div>
+  </body>
+</html>
